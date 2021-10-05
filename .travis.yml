@@ -8,7 +8,7 @@
 # ENPM808X Midterm - Phase 0 Proposal
 
 
-dist: bionic  #ubuntu 18
+dist: xenial
 
 language: cpp
 
