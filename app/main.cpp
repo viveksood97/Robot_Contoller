@@ -8,3 +8,9 @@
  * ENPM808X Midterm - Phase 0 Proposal
  *
  */
+
+#include <iostream>
+
+int main() {
+    return 0;
+}
