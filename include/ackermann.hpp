@@ -11,5 +11,27 @@
 #ifndef ACKERMANN_HPP_
 #define ACKERMANN_HPP_
 
+#include <iostream>
+
+/// @class Ackermann
+/// @brief Implementation of an Ackermann Controller
+class Ackermann {
+ public:
+    void setRobotProps(double _tread, double _wheelBase,
+    double _radiusOfCurvature, double _maxSteerAngle);
+
+    void setDt(double timeInterval);
+    void setTargetHeading(double heading);
+
+    double computeModelOutputs(double currentHeading);
+
+ private:
+    double tread;
+    double wheelBase;
+    double radiusOfCurvature;
+    double maxSteerAngle;
+    double dt;
+    double targetHeading;
+};
 
 #endif  // ACKERMANN_HPP_
