@@ -18,7 +18,7 @@ class TwoWDRobot {
  public:
     double computeHeading(double _initialHeading, double _targetHeading);
     double computeVelocity(double _initialVelocity, double _targetVelocity);
-    void setDt(double timeInterval);
+    bool setDt(double timeInterval);
 
  private:
     double targetHeading;
