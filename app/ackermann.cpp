@@ -7,7 +7,17 @@
 /// @brief Driver: Vivek Sood Navigator: Charu Sharma
 /// @date   2021-10-16
 
+#include "ackermann.hpp"
 
+    void Ackermann::setRobotProps(double _tread, double _wheelBase,
+    double _radiusOfCurvature, double maxSteerAngle) {}
+
+    void Ackermann::setDt(double timeinterval) {}
+    void Ackermann::setTargetHeading(double heading) {}
+
+    double Ackermann::computeModelOutputs(double currentHeading) {
+        return 4.20;
+    }
 
 
 
