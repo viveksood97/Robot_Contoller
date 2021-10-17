@@ -19,6 +19,7 @@ double TwoWDRobot::
 computeVelocity(double _initialVelocity, double _targetVelocity) {
     return 1.7;
 }
+void TwoWDRobot::setDt(double timeInterval) {}
 
 
 

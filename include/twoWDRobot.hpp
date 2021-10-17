@@ -18,14 +18,15 @@ class TwoWDRobot {
  public:
     double computeHeading(double _initialHeading, double _targetHeading);
     double computeVelocity(double _initialVelocity, double _targetVelocity);
+    void setDt(double timeInterval);
 
  private:
     double targetHeading;
     double targetVelocity;
     double initialHeading;
     double initialVelocity;
-    double innerAngle;
-    double outerAngle;
+    double innerWheelAngle;
+    double outerWheelAngle;
     double dt;
 };
 
