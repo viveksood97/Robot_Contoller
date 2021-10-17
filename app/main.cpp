@@ -8,9 +8,11 @@
  * ENPM808X Midterm - Phase 0 Proposal
  *
  */
-
 #include <iostream>
+#include "ackermann.hpp"
 
 int main() {
+    Ackermann ackermann;
+    std::cout << ackermann.computeModelOutputs(5) << std::endl;
     return 0;
 }
