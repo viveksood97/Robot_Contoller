@@ -10,5 +10,29 @@
 #ifndef PID_HPP_
 #define PID_HPP_
 
+#include <iostream>
+
+/// @class PIDController
+/// @brief Implementation of a PID controller
+class PID {
+ public:
+    void setKp(double pGain);
+    void setKd(double dGain);
+    void setKi(double iGain);
+    void setDt(double timeInterval);
+    void setTargetVelocity(double velocity);
+    double computePID(double currentVelocity);
+
+ private:
+    double kp;
+    double ki;
+    double kd;
+    double dt;
+    double cumulativeError;
+    double prevError;
+    double targetVelocity;
+};
+
+
 
 #endif  // PID_HPP_
