@@ -7,6 +7,19 @@
 /// @brief Driver: Vivek Sood Navigator: Charu Sharma
 /// @date   2021-10-16
 
+#include "twoWDRobot.hpp"
+#include "pid.hpp"
+#include "ackermann.hpp"
+
+double TwoWDRobot::
+computeHeading(double _initialHeading, double _targetHeading) {
+    return 1.6;
+}
+double TwoWDRobot::
+computeVelocity(double _initialVelocity, double _targetVelocity) {
+    return 1.7;
+}
+void TwoWDRobot::setDt(double timeInterval) {}
 
 
 

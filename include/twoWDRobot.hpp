@@ -10,5 +10,25 @@
 #ifndef TWOWDROBOT_HPP_
 #define TWOWDROBOT_HPP_
 
+#include <iostream>
+
+/// @class TwoWDRobot
+/// @brief Implementation of an TwoWDRobot Class
+class TwoWDRobot {
+ public:
+    double computeHeading(double _initialHeading, double _targetHeading);
+    double computeVelocity(double _initialVelocity, double _targetVelocity);
+    void setDt(double timeInterval);
+
+ private:
+    double targetHeading;
+    double targetVelocity;
+    double initialHeading;
+    double initialVelocity;
+    double innerWheelAngle;
+    double outerWheelAngle;
+    double dt;
+};
+
 
 #endif  // TWOWDROBOT_HPP_
