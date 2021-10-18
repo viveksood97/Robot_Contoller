@@ -10,6 +10,7 @@ option(COVERAGE "Generate Coverage Data" OFF)
 if (COVERAGE)
     include(CodeCoverage)
     set(LCOV_REMOVE_EXTRA "'vendor/*'")
+    set(LCOV_REMOVE_EXTRA "'lib/*'")
     setup_target_for_coverage(code_coverage test/cpp-test coverage)
     set(COVERAGE_SRCS app/ackermann.cpp app/pid.cpp app/twoWDRobot.cpp app/visualization.cpp include/ackermann.hpp include/pid.hpp include/twoWDRobot.hpp include/visualization.hpp)
 
