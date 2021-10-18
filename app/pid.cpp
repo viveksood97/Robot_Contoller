@@ -9,11 +9,21 @@
 
 #include <pid.hpp>
 
-    bool PID::setKp(double pGain) {}
-    bool PID::setKd(double dGain) {}
-    bool PID::setKi(double iGain) {}
-    bool PID::setDt(double timeInterval) {}
-    bool PID::setTargetVelocity(double velocity) {}
+    bool PID::setKp(double pGain) {
+        return true;
+    }
+    bool PID::setKd(double dGain) {
+        return true;
+    }
+    bool PID::setKi(double iGain) {
+        return true;
+    }
+    bool PID::setDt(double timeInterval) {
+        return true;
+    }
+    bool PID::setTargetVelocity(double velocity) {
+        return true;
+    }
     double PID::computePID(double currentVelocity) {
         return 6.9;
     }
