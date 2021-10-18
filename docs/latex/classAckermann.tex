@@ -1,0 +1,112 @@
+\hypertarget{classAckermann}{}\section{Ackermann Class Reference}
+\label{classAckermann}\index{Ackermann@{Ackermann}}
+
+
+Implementation of an \hyperlink{classAckermann}{Ackermann} Controller.  
+
+
+
+
+{\ttfamily \#include $<$ackermann.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classAckermann_a70edfb9472f629092736004586a5b3ce}{set\+Robot\+Props} (double \+\_\+tread, double \+\_\+wheel\+Base, double \+\_\+radius\+Of\+Curvature, double \+\_\+max\+Steer\+Angle)
+\begin{DoxyCompactList}\small\item\em Setter for robot parameters. \end{DoxyCompactList}\item 
+bool \hyperlink{classAckermann_ac849806d5f7fa705afd1691d0e1564ab}{set\+Dt} (double time\+Interval)
+\begin{DoxyCompactList}\small\item\em Setter for time interval. \end{DoxyCompactList}\item 
+bool \hyperlink{classAckermann_ae03561a8d47231a26dcbb0e8661b29b1}{set\+Target\+Heading} (double heading)
+\begin{DoxyCompactList}\small\item\em Setter for target\+Heading. \end{DoxyCompactList}\item 
+double \hyperlink{classAckermann_a6d7fa80feb037e7964e2c6b5044df615}{compute\+Model\+Outputs} (double current\+Heading)
+\begin{DoxyCompactList}\small\item\em Computes outputs according to ackermann steering model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of an \hyperlink{classAckermann}{Ackermann} Controller. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAckermann_a6d7fa80feb037e7964e2c6b5044df615}\label{classAckermann_a6d7fa80feb037e7964e2c6b5044df615}} 
+\index{Ackermann@{Ackermann}!compute\+Model\+Outputs@{compute\+Model\+Outputs}}
+\index{compute\+Model\+Outputs@{compute\+Model\+Outputs}!Ackermann@{Ackermann}}
+\subsubsection{\texorpdfstring{compute\+Model\+Outputs()}{computeModelOutputs()}}
+{\footnotesize\ttfamily double Ackermann\+::compute\+Model\+Outputs (\begin{DoxyParamCaption}\item[{double}]{current\+Heading }\end{DoxyParamCaption})}
+
+
+
+Computes outputs according to ackermann steering model. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em current\+Heading} & current heading of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new\+Heading 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAckermann_ac849806d5f7fa705afd1691d0e1564ab}\label{classAckermann_ac849806d5f7fa705afd1691d0e1564ab}} 
+\index{Ackermann@{Ackermann}!set\+Dt@{set\+Dt}}
+\index{set\+Dt@{set\+Dt}!Ackermann@{Ackermann}}
+\subsubsection{\texorpdfstring{set\+Dt()}{setDt()}}
+{\footnotesize\ttfamily bool Ackermann\+::set\+Dt (\begin{DoxyParamCaption}\item[{double}]{time\+Interval }\end{DoxyParamCaption})}
+
+
+
+Setter for time interval. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time\+Interval} & time interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAckermann_a70edfb9472f629092736004586a5b3ce}\label{classAckermann_a70edfb9472f629092736004586a5b3ce}} 
+\index{Ackermann@{Ackermann}!set\+Robot\+Props@{set\+Robot\+Props}}
+\index{set\+Robot\+Props@{set\+Robot\+Props}!Ackermann@{Ackermann}}
+\subsubsection{\texorpdfstring{set\+Robot\+Props()}{setRobotProps()}}
+{\footnotesize\ttfamily bool Ackermann\+::set\+Robot\+Props (\begin{DoxyParamCaption}\item[{double}]{\+\_\+tread,  }\item[{double}]{\+\_\+wheel\+Base,  }\item[{double}]{\+\_\+radius\+Of\+Curvature,  }\item[{double}]{\+\_\+max\+Steer\+Angle }\end{DoxyParamCaption})}
+
+
+
+Setter for robot parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tread} & the value of tread for the robot \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+wheel\+Base} & the value of wheel\+Base for the robot \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+radius\+Of\+Curvature} & the value of radius\+Of\+Curvature \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+max\+Steer\+Angle} & the value of max\+Steer\+Angle for the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAckermann_ae03561a8d47231a26dcbb0e8661b29b1}\label{classAckermann_ae03561a8d47231a26dcbb0e8661b29b1}} 
+\index{Ackermann@{Ackermann}!set\+Target\+Heading@{set\+Target\+Heading}}
+\index{set\+Target\+Heading@{set\+Target\+Heading}!Ackermann@{Ackermann}}
+\subsubsection{\texorpdfstring{set\+Target\+Heading()}{setTargetHeading()}}
+{\footnotesize\ttfamily bool Ackermann\+::set\+Target\+Heading (\begin{DoxyParamCaption}\item[{double}]{heading }\end{DoxyParamCaption})}
+
+
+
+Setter for target\+Heading. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em heading} & target heading of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{ackermann_8hpp}{ackermann.\+hpp}\item 
+app/\hyperlink{ackermann_8cpp}{ackermann.\+cpp}\end{DoxyCompactItemize}
