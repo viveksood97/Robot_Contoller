@@ -14,6 +14,7 @@
 Ackermann ackermann;
 
 TEST(AckermannTests, testSetAttributes) {
+    Ackermann ackermann;
     EXPECT_TRUE(ackermann.setRobotProps(1.2, 1.2, 1.2, 1.2));
     EXPECT_TRUE(ackermann.setDt(0.1));
     EXPECT_TRUE(ackermann.setTargetHeading(1.2));
