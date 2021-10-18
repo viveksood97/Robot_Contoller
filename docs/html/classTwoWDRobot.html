@@ -73,12 +73,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaa0e059e4c80b75ec2bf5daca6943552"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTwoWDRobot.html#aaa0e059e4c80b75ec2bf5daca6943552">computeHeading</a> (double _initialHeading, double _targetHeading)</td></tr>
-<tr class="memdesc:aaa0e059e4c80b75ec2bf5daca6943552"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the new Heading using the Ackemann class method computeAckermann.  <a href="#aaa0e059e4c80b75ec2bf5daca6943552">More...</a><br /></td></tr>
-<tr class="separator:aaa0e059e4c80b75ec2bf5daca6943552"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a77115505f0be8b545d877fc0a34d1c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTwoWDRobot.html#a3a77115505f0be8b545d877fc0a34d1c">computeVelocity</a> (double _initialVelocity, double _targetVelocity)</td></tr>
-<tr class="memdesc:a3a77115505f0be8b545d877fc0a34d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the new Velocity using the <a class="el" href="classPID.html">PID</a> class method computePID.  <a href="#a3a77115505f0be8b545d877fc0a34d1c">More...</a><br /></td></tr>
-<tr class="separator:a3a77115505f0be8b545d877fc0a34d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e69f6aefac0a8a692b1b0eafb70396"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTwoWDRobot.html#a03e69f6aefac0a8a692b1b0eafb70396">computeHeading</a> (double _initialHeading, double _targetHeading)</td></tr>
+<tr class="memdesc:a03e69f6aefac0a8a692b1b0eafb70396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the new Heading using the Ackemann class method computeAckermann.  <a href="#a03e69f6aefac0a8a692b1b0eafb70396">More...</a><br /></td></tr>
+<tr class="separator:a03e69f6aefac0a8a692b1b0eafb70396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde5c9c504d2db26a05fd605f621b49b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTwoWDRobot.html#afde5c9c504d2db26a05fd605f621b49b">computeVelocity</a> (double _initialVelocity, double _targetVelocity)</td></tr>
+<tr class="memdesc:afde5c9c504d2db26a05fd605f621b49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the new Velocity using the <a class="el" href="classPID.html">PID</a> class method computePID.  <a href="#afde5c9c504d2db26a05fd605f621b49b">More...</a><br /></td></tr>
+<tr class="separator:afde5c9c504d2db26a05fd605f621b49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0112dd192de96966588226c55d84223d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTwoWDRobot.html#a0112dd192de96966588226c55d84223d">setDt</a> (double timeInterval)</td></tr>
 <tr class="memdesc:a0112dd192de96966588226c55d84223d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for time interval.  <a href="#a0112dd192de96966588226c55d84223d">More...</a><br /></td></tr>
 <tr class="separator:a0112dd192de96966588226c55d84223d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -86,14 +86,14 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of an <a class="el" href="classTwoWDRobot.html" title="Implementation of an TwoWDRobot Class. ">TwoWDRobot</a> Class. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aaa0e059e4c80b75ec2bf5daca6943552"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa0e059e4c80b75ec2bf5daca6943552">&#9670;&nbsp;</a></span>computeHeading()</h2>
+<a id="a03e69f6aefac0a8a692b1b0eafb70396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e69f6aefac0a8a692b1b0eafb70396">&#9670;&nbsp;</a></span>computeHeading()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double TwoWDRobot::computeHeading </td>
+          <td class="memname">bool TwoWDRobot::computeHeading </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>_initialHeading</em>, </td>
@@ -120,18 +120,18 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true/false </dd></dl>
 
 </div>
 </div>
-<a id="a3a77115505f0be8b545d877fc0a34d1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a77115505f0be8b545d877fc0a34d1c">&#9670;&nbsp;</a></span>computeVelocity()</h2>
+<a id="afde5c9c504d2db26a05fd605f621b49b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde5c9c504d2db26a05fd605f621b49b">&#9670;&nbsp;</a></span>computeVelocity()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double TwoWDRobot::computeVelocity </td>
+          <td class="memname">bool TwoWDRobot::computeVelocity </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>_initialVelocity</em>, </td>
@@ -158,7 +158,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true/false </dd></dl>
 
 </div>
 </div>
