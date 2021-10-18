@@ -5,8 +5,9 @@
 
 
 ## Authors
- - Vivek Sood (UID 117504279)
- - Charu Sharma (UID 117555448)
+Phase 1: Planning and Design
+ - Driver: [Vivek Sood](<https://github.com/viveksood97>)  (UID 117504279)
+ - Navigator: [Charu Sharma](<https://github.com/Sharma117555448>) (UID 117555448)
 
 # Overview
 In this project we implement a controller for an Ackermann kinematic model with a maximum steering angle constraint (e.g. < 45 degrees) (input robot target heading and velocity, output steering and the two drive wheel velocities, demonstrating convergence to the set points).
@@ -18,9 +19,10 @@ We have been following the agile methodology in this project to track all the ta
 
 ## All the necessary links 
 - Link for proposal: [proposal](https://drive.google.com/file/d/1wLCBFTQJ4ZTIBm7_OMXAdsh-fdLl33LF/view)
-- Link for proposal video: [proposal video](https://drive.google.com/file/d/1G99AhuwNNmJvOoLWowdKSbD6CoMQz3zb/view)
+- Link for proposal video: [proposal video](https://drive.google.com/drive/folders/1sYS6UQOdyQys9J8Een5iecVueSnCdDFZ)
 - Link for proposal presentation: [Proposal Presentation](https://docs.google.com/presentation/d/1iLKKHUWsUh4rI2HVl6a0bfbaCnp-vlT2/edit#slide=id.gf6065eecf8_0_326)
-- Link for quad chart: [quad chart](https://drive.google.com/file/d/16Bhl7vpuL6NwU_m8zxUkITL6Cl9oWY0c/view)
+- Link for quad chart: [Quad Chart](https://drive.google.com/file/d/16Bhl7vpuL6NwU_m8zxUkITL6Cl9oWY0c/view)
+- Product Backlog: [AIP](https://docs.google.com/spreadsheets/d/1ycvQy3vhNMT0W67lCo_2hgW9C9ZCRkmT/edit?rtpof=true)
 
 ## Standard install via command-line
 ```
@@ -33,3 +35,40 @@ make
 Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
+
+
+## Building for code coverage
+Install code-coverage tool, else the code coverage command will not work. It is a one time installation: 
+```
+sudo apt-get install lcov
+```
+```
+cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
+make
+make code_coverage
+```
+
+This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
+
+## Run cppcheck and cpplint
+Run cppcheck: Results are stored in `./results/cppcheck.txt` 
+```
+cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" -e "^./lib") > results/cppcheck.txt 2>&1
+```
+
+Run cpplint: Results are stored in `./results/cpplint.txt`
+```
+cpplint $( find . -name \*.hpp -or -name \*.cpp | grep -vE -e "^./build/" -e "^./vendor/" -e "^./docs/" -e "^./results" -e "^./lib/") > results/cpplint.txt 2>&1
+```
+
+## Run Doxygen
+Run Doxygen: Results are stored in `./docs/html/index.htlm`
+```
+doxygen docs/doxygen-file
+```
+
+## Dependencies
+We have the following library dependencies:
+- pbPlot
+- time.h
+
