@@ -9,11 +9,17 @@
 
 #include "ackermann.hpp"
 
-    void Ackermann::setRobotProps(double _tread, double _wheelBase,
-    double _radiusOfCurvature, double _maxSteerAngle) {}
+    bool Ackermann::setRobotProps(double _tread, double _wheelBase,
+    double _radiusOfCurvature, double _maxSteerAngle) {
+        return true;
+    }
 
-    void Ackermann::setDt(double timeInterval) {}
-    void Ackermann::setTargetHeading(double heading) {}
+    bool Ackermann::setDt(double timeInterval) {
+        return true;
+    }
+    bool Ackermann::setTargetHeading(double heading) {
+        return true;
+    }
 
     double Ackermann::computeModelOutputs(double currentHeading) {
         return 4.20;

@@ -16,11 +16,11 @@
 /// @brief Implementation of a PID controller
 class PID {
  public:
-    void setKp(double pGain);
-    void setKd(double dGain);
-    void setKi(double iGain);
-    void setDt(double timeInterval);
-    void setTargetVelocity(double velocity);
+    bool setKp(double pGain);
+    bool setKd(double dGain);
+    bool setKi(double iGain);
+    bool setDt(double timeInterval);
+    bool setTargetVelocity(double velocity);
     double computePID(double currentVelocity);
 
  private:
