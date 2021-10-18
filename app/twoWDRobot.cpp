@@ -11,13 +11,13 @@
 #include "pid.hpp"
 #include "ackermann.hpp"
 
-double TwoWDRobot::
+bool TwoWDRobot::
 computeHeading(double _initialHeading, double _targetHeading) {
-    return 1.6;
+    return true;
 }
-double TwoWDRobot::
+bool TwoWDRobot::
 computeVelocity(double _initialVelocity, double _targetVelocity) {
-    return 1.7;
+    return true;
 }
 bool TwoWDRobot::setDt(double timeInterval) {
     return true;

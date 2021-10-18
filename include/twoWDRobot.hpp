@@ -7,8 +7,8 @@
 /// @brief Driver: Vivek Sood Navigator: Charu Sharma
 /// @date   2021-10-16
 
-#ifndef TWOWDROBOT_HPP_
-#define TWOWDROBOT_HPP_
+#ifndef INCLUDE_TWOWDROBOT_HPP_
+#define INCLUDE_TWOWDROBOT_HPP_
 
 #include <iostream>
 
@@ -16,8 +16,23 @@
 /// @brief Implementation of an TwoWDRobot Class
 class TwoWDRobot {
  public:
-    double computeHeading(double _initialHeading, double _targetHeading);
-    double computeVelocity(double _initialVelocity, double _targetVelocity);
+    /// @brief Computes the new Heading using
+    /// the Ackemann class method computeAckermann
+    /// @param[in] _initialHeading starting heading of the robot
+    /// @param[in] _targetHeading target heading of the robot
+    /// @return true/false
+    bool computeHeading(double _initialHeading, double _targetHeading);
+
+    /// @brief Computes the new Velocity using
+    /// the PID class method computePID
+    /// @param[in] _initialVelocity starting Velocity of the robot
+    /// @param[in] _targetVelocity target Velocity of the robot
+    /// @return true/false
+    bool computeVelocity(double _initialVelocity, double _targetVelocity);
+
+    /// @brief Setter for time interval.
+    /// @param[in] timeInterval time interval
+    /// @return true/false
     bool setDt(double timeInterval);
 
  private:
@@ -31,4 +46,4 @@ class TwoWDRobot {
 };
 
 
-#endif  // TWOWDROBOT_HPP_
+#endif  // INCLUDE_TWOWDROBOT_HPP_

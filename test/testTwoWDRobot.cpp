@@ -18,13 +18,9 @@ TEST(TwoWDRobotTests, testSetAttributes) {
 }
 
 TEST(TwoWDRobotTests, testcomputeHeading) {
-    double expectedResult = 1.6;
-    EXPECT_TRUE((twoWDRobot.computeHeading(10, 10) - expectedResult >= -0.1)
-    && (twoWDRobot.computeHeading(10, 10) - expectedResult <= 0.1));
+    EXPECT_TRUE(twoWDRobot.computeHeading(10, 10));
 }
 
 TEST(TwoWDRobotTests, testcomputeVelocity) {
-    double expectedResult = 1.7;
-    EXPECT_TRUE((twoWDRobot.computeVelocity(10, 10) - expectedResult >= -0.1)
-    && (twoWDRobot.computeVelocity(10, 10) - expectedResult <= 0.1));
+    EXPECT_TRUE(twoWDRobot.computeVelocity(10, 10));
 }

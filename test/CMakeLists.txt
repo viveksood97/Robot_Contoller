@@ -6,9 +6,11 @@ add_executable(
     testAckermann.cpp
     testPID.cpp
     testTwoWDRobot.cpp
+    testVisualization.cpp
     ../app/ackermann.cpp
     ../app/pid.cpp
     ../app/twoWDRobot.cpp
+    ../app/visualization.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
