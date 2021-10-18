@@ -13,11 +13,11 @@
 
 bool TwoWDRobot::
 computeHeading(double _initialHeading, double _targetHeading) {
-    return 1.6;
+    return true;
 }
 bool TwoWDRobot::
 computeVelocity(double _initialVelocity, double _targetVelocity) {
-    return 1.7;
+    return true;
 }
 bool TwoWDRobot::setDt(double timeInterval) {
     return true;
