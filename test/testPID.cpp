@@ -12,8 +12,9 @@
 #include <gtest/gtest.h>
 #include "pid.hpp"
 
+PID pid;
+
 TEST(PID, testSetAttributes) {
-    PID pid;
     EXPECT_TRUE(pid.setKp(1.2));
     EXPECT_TRUE(pid.setKi(1.2));
     EXPECT_TRUE(pid.setKd(1.2));
@@ -22,7 +23,6 @@ TEST(PID, testSetAttributes) {
 }
 
 TEST(PID, testComputePID) {
-    PID pid;
     double expectedResult = 6.9;
     EXPECT_TRUE((pid.computePID(10) - expectedResult >= -0.1)
     && (pid.computePID(10) - expectedResult <= 0.1));
