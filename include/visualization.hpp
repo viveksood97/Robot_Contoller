@@ -7,8 +7,8 @@
 /// @brief Driver: Vivek Sood Navigator: Charu Sharma
 /// @date   2021-10-17
 
-#ifndef VISUALIZATION_HPP_
-#define VISUALIZATION_HPP_
+#ifndef  INCLUDE_VISUALIZATION_HPP_
+#define  INCLUDE_VISUALIZATION_HPP_
 
 #include <iostream>
 #include <vector>
@@ -35,4 +35,4 @@ class Visualization {
 };
 
 
-#endif  // VISUALIZATION_HPP_
+#endif  // INCLUDE_VISUALIZATION_HPP_

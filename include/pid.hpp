@@ -7,8 +7,8 @@
 /// @brief Driver: Vivek Sood Navigator: Charu Sharma
 /// @date   2021-10-16
 
-#ifndef PID_HPP_
-#define PID_HPP_
+#ifndef INCLUDE_PID_HPP_
+#define INCLUDE_PID_HPP_
 
 #include <iostream>
 
@@ -35,4 +35,4 @@ class PID {
 
 
 
-#endif  // PID_HPP_
+#endif  // INCLUDE_PID_HPP_

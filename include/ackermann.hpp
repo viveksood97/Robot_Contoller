@@ -8,8 +8,8 @@
 /// @date   2021-10-16
 
 
-#ifndef ACKERMANN_HPP_
-#define ACKERMANN_HPP_
+#ifndef INCLUDE_ACKERMANN_HPP_
+#define INCLUDE_ACKERMANN_HPP_
 
 #include <iostream>
 
@@ -34,4 +34,4 @@ class Ackermann {
     double targetHeading;
 };
 
-#endif  // ACKERMANN_HPP_
+#endif  // INCLUDE_ACKERMANN_HPP_
