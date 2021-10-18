@@ -12,8 +12,6 @@
 
 #include <iostream>
 #include <vector>
-#include "../lib/include/pbPlots.hpp"
-#include "../lib/include/supportLib.hpp"
 
 
 /// @class Visualization

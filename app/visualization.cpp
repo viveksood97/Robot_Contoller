@@ -8,6 +8,8 @@
 /// @date   2021-10-16
 
 #include <visualization.hpp>
+#include "../lib/include/pbPlots.hpp"
+#include "../lib/include/supportLib.hpp"
 
 bool Visualization::setVelocities(std::vector<double> v) {
     return true;
