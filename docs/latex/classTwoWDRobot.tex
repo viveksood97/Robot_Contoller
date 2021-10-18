@@ -12,9 +12,9 @@ Implementation of an \hyperlink{classTwoWDRobot}{Two\+W\+D\+Robot} Class.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-double \hyperlink{classTwoWDRobot_aaa0e059e4c80b75ec2bf5daca6943552}{compute\+Heading} (double \+\_\+initial\+Heading, double \+\_\+target\+Heading)
+bool \hyperlink{classTwoWDRobot_a03e69f6aefac0a8a692b1b0eafb70396}{compute\+Heading} (double \+\_\+initial\+Heading, double \+\_\+target\+Heading)
 \begin{DoxyCompactList}\small\item\em Computes the new Heading using the Ackemann class method compute\+Ackermann. \end{DoxyCompactList}\item 
-double \hyperlink{classTwoWDRobot_a3a77115505f0be8b545d877fc0a34d1c}{compute\+Velocity} (double \+\_\+initial\+Velocity, double \+\_\+target\+Velocity)
+bool \hyperlink{classTwoWDRobot_afde5c9c504d2db26a05fd605f621b49b}{compute\+Velocity} (double \+\_\+initial\+Velocity, double \+\_\+target\+Velocity)
 \begin{DoxyCompactList}\small\item\em Computes the new Velocity using the \hyperlink{classPID}{P\+ID} class method compute\+P\+ID. \end{DoxyCompactList}\item 
 bool \hyperlink{classTwoWDRobot_a0112dd192de96966588226c55d84223d}{set\+Dt} (double time\+Interval)
 \begin{DoxyCompactList}\small\item\em Setter for time interval. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -24,11 +24,11 @@ bool \hyperlink{classTwoWDRobot_a0112dd192de96966588226c55d84223d}{set\+Dt} (dou
 Implementation of an \hyperlink{classTwoWDRobot}{Two\+W\+D\+Robot} Class. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classTwoWDRobot_aaa0e059e4c80b75ec2bf5daca6943552}\label{classTwoWDRobot_aaa0e059e4c80b75ec2bf5daca6943552}} 
+\mbox{\Hypertarget{classTwoWDRobot_a03e69f6aefac0a8a692b1b0eafb70396}\label{classTwoWDRobot_a03e69f6aefac0a8a692b1b0eafb70396}} 
 \index{Two\+W\+D\+Robot@{Two\+W\+D\+Robot}!compute\+Heading@{compute\+Heading}}
 \index{compute\+Heading@{compute\+Heading}!Two\+W\+D\+Robot@{Two\+W\+D\+Robot}}
 \subsubsection{\texorpdfstring{compute\+Heading()}{computeHeading()}}
-{\footnotesize\ttfamily double Two\+W\+D\+Robot\+::compute\+Heading (\begin{DoxyParamCaption}\item[{double}]{\+\_\+initial\+Heading,  }\item[{double}]{\+\_\+target\+Heading }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Two\+W\+D\+Robot\+::compute\+Heading (\begin{DoxyParamCaption}\item[{double}]{\+\_\+initial\+Heading,  }\item[{double}]{\+\_\+target\+Heading }\end{DoxyParamCaption})}
 
 
 
@@ -42,13 +42,13 @@ Computes the new Heading using the Ackemann class method compute\+Ackermann.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-0 
+true/false 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTwoWDRobot_a3a77115505f0be8b545d877fc0a34d1c}\label{classTwoWDRobot_a3a77115505f0be8b545d877fc0a34d1c}} 
+\mbox{\Hypertarget{classTwoWDRobot_afde5c9c504d2db26a05fd605f621b49b}\label{classTwoWDRobot_afde5c9c504d2db26a05fd605f621b49b}} 
 \index{Two\+W\+D\+Robot@{Two\+W\+D\+Robot}!compute\+Velocity@{compute\+Velocity}}
 \index{compute\+Velocity@{compute\+Velocity}!Two\+W\+D\+Robot@{Two\+W\+D\+Robot}}
 \subsubsection{\texorpdfstring{compute\+Velocity()}{computeVelocity()}}
-{\footnotesize\ttfamily double Two\+W\+D\+Robot\+::compute\+Velocity (\begin{DoxyParamCaption}\item[{double}]{\+\_\+initial\+Velocity,  }\item[{double}]{\+\_\+target\+Velocity }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Two\+W\+D\+Robot\+::compute\+Velocity (\begin{DoxyParamCaption}\item[{double}]{\+\_\+initial\+Velocity,  }\item[{double}]{\+\_\+target\+Velocity }\end{DoxyParamCaption})}
 
 
 
@@ -62,7 +62,7 @@ Computes the new Velocity using the \hyperlink{classPID}{P\+ID} class method com
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-0 
+true/false 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classTwoWDRobot_a0112dd192de96966588226c55d84223d}\label{classTwoWDRobot_a0112dd192de96966588226c55d84223d}} 
 \index{Two\+W\+D\+Robot@{Two\+W\+D\+Robot}!set\+Dt@{set\+Dt}}

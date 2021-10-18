@@ -20,15 +20,15 @@ class TwoWDRobot {
     /// the Ackemann class method computeAckermann
     /// @param[in] _initialHeading starting heading of the robot
     /// @param[in] _targetHeading target heading of the robot
-    /// @return 0
-    double computeHeading(double _initialHeading, double _targetHeading);
+    /// @return true/false
+    bool computeHeading(double _initialHeading, double _targetHeading);
 
     /// @brief Computes the new Velocity using
     /// the PID class method computePID
     /// @param[in] _initialVelocity starting Velocity of the robot
     /// @param[in] _targetVelocity target Velocity of the robot
-    /// @return 0
-    double computeVelocity(double _initialVelocity, double _targetVelocity);
+    /// @return true/false
+    bool computeVelocity(double _initialVelocity, double _targetVelocity);
 
     /// @brief Setter for time interval.
     /// @param[in] timeInterval time interval
