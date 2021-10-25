@@ -1,17 +1,18 @@
-// Copyright (c) No idea about this :). No copyright.
+/// Copyright (c) 2021 Charu Sharma and Vivek Sood
 // Licensed under the MIT License.
 
 
 /// @file   ackermann.hpp
 /// @authors Vivek Sood, Charu Sharma
-/// @brief Driver: Vivek Sood Navigator: Charu Sharma
-/// @date   2021-10-16
+/// @brief Phase1- Driver: Vivek Sood Navigator: Charu Sharma
+/// @brief Phase2- Driver: Charu Sharma Navigator: Vivek Sood
 
 
 #ifndef INCLUDE_ACKERMANN_HPP_
 #define INCLUDE_ACKERMANN_HPP_
 
 #include <iostream>
+#include <vector>
 
 /// @class Ackermann
 /// @brief Implementation of an Ackermann Controller
