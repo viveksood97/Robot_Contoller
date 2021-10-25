@@ -1,17 +1,18 @@
-// Copyright (c) No idea about this :). No copyright.
+/// Copyright (c) 2021 Charu Sharma and Vivek Sood
 // Licensed under the MIT License.
 
 
 /// @file   ackermann.hpp
 /// @authors Vivek Sood, Charu Sharma
-/// @brief Driver: Vivek Sood Navigator: Charu Sharma
-/// @date   2021-10-16
+/// @brief Phase1- Driver: Vivek Sood Navigator: Charu Sharma
+/// @brief Phase2- Driver: Charu Sharma Navigator: Vivek Sood
 
 
 #ifndef INCLUDE_ACKERMANN_HPP_
 #define INCLUDE_ACKERMANN_HPP_
 
 #include <iostream>
+#include <vector>
 
 /// @class Ackermann
 /// @brief Implementation of an Ackermann Controller
@@ -37,18 +38,38 @@ class Ackermann {
     /// @return true/false
     bool setTargetHeading(double heading);
 
+    /// @brief to calculate radiusOfCurvature.
+    /// @return true/false
+    bool calculateROC();
+
+    /// @brief to calculate the arcLength.
+    /// @return true/false
+    bool calculateArc();
+
+    /// @brief to calculate the wheel angles.
+    /// @param[in] radiusOfCurvature radius of curvature of the turn
+    /// @return true/false
+    bool calculateAngles(double* _innerWheelAngle,
+    double* _outerWheelAngle);
+
     /// @brief Computes outputs according to ackermann steering model
     /// @param[in] currentHeading current heading of the robot
     /// @return newHeading
-    double computeModelOutputs(double currentHeading);
+    double computeModelOutputs(double currentHeading,
+    double start, double currentVelocity, std::vector<double> *time);
+
 
  private:
+    double currentHeading;
+    double targetHeading;
+    double currentVelocity;
+    double arcLength;
     double tread;
     double wheelBase;
     double radiusOfCurvature;
     double maxSteerAngle;
     double dt;
-    double targetHeading;
+    // double targetHeading;
 };
 
 #endif  // INCLUDE_ACKERMANN_HPP_

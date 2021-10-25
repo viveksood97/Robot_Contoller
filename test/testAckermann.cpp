@@ -21,8 +21,10 @@ TEST(AckermannTests, testSetAttributes) {
 }
 
 TEST(AckermannTests, testComputeModelOutputs) {
-    double expectedResult = 4.20;
-    EXPECT_TRUE((ackermann.computeModelOutputs(10) - expectedResult >= -0.1)
-    && (ackermann.computeModelOutputs(10) - expectedResult <= 0.1));
+    double expectedResult = 1.2;
+    std::vector<double> time {1, 2, 3, 4};
+    EXPECT_TRUE((ackermann.computeModelOutputs(
+        10, 60, 10, &time) - expectedResult >= -0.1)
+    && (ackermann.computeModelOutputs(10, 60, 10,
+    &time) - expectedResult <= 0.1));
 }
-
