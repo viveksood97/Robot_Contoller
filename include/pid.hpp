@@ -51,8 +51,8 @@ class PID {
     double ki;
     double kd;
     double dt;
-    double cumulativeError;
-    double prevError;
+    double cumulativeError = 0;
+    double prevError = 0.0;
     double targetVelocity;
 };
 

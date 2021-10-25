@@ -10,18 +10,23 @@
 #include <pid.hpp>
 
     bool PID::setKp(double pGain) {
+        kp = pGain;
         return true;
     }
     bool PID::setKd(double dGain) {
+        kd = dGain;
         return true;
     }
     bool PID::setKi(double iGain) {
+        ki = iGain;
         return true;
     }
     bool PID::setDt(double timeInterval) {
+        dt = timeInterval;
         return true;
     }
     bool PID::setTargetVelocity(double velocity) {
+        targetVelocity = velocity;
         return true;
     }
     double PID::computePID(double currentVelocity) {
