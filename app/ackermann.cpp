@@ -33,9 +33,39 @@
         return true;
     }
 
-    double Ackermann::computeModelOutputs(double currentHeading) {
-        return 4.20;
+    bool Ackermann::calculateROC() {
+        radiusOfCurvature = atan(targetHeading) * 180 / PI;
+        return true;
     }
+
+    bool Ackermann::calculateArc() {
+        arcLength = 2 * PI * radiusOfCurvature * targetHeading/ 360;
+        return true;
+    }
+    bool Ackermann::calculateAngles(double* _innerWheelAngle,
+    double* _outerWheelAngle) {
+    *_innerWheelAngle = atan(wheelBase / (radiusOfCurvature - 0.5*tread));
+    *_outerWheelAngle = atan(wheelBase / (radiusOfCurvature + 0.5*tread));
+    // in radians
+
+    return true;
+    }
+
+    double Ackermann::computeModelOutputs(double currentHeading,
+    double start, double currentVelocity, std::vector<double> *time) {
+
+        //   while (abs(targetHeading - currentHeading) > 0.01) {
+        clock_t end = clock();
+        double dt = (static_cast<double> (end - start)) / CLOCKS_PER_SEC;
+        time->push_back((static_cast<double> (end)) / CLOCKS_PER_SEC);
+
+        double distTravelled = currentVelocity * dt;
+        currentHeading  = (distTravelled * targetHeading/ arcLength);
+
+        return currentHeading;
+}
+
+
 
 
 

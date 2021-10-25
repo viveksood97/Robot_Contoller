@@ -38,18 +38,38 @@ class Ackermann {
     /// @return true/false
     bool setTargetHeading(double heading);
 
+    /// @brief to calculate radiusOfCurvature.
+    /// @return true/false
+    bool calculateROC();
+
+    /// @brief to calculate the arcLength.
+    /// @return true/false
+    bool calculateArc();
+
+    /// @brief to calculate the wheel angles.
+    /// @param[in] radiusOfCurvature radius of curvature of the turn
+    /// @return true/false
+    bool calculateAngles(double* _innerWheelAngle,
+    double* _outerWheelAngle);
+
     /// @brief Computes outputs according to ackermann steering model
     /// @param[in] currentHeading current heading of the robot
     /// @return newHeading
-    double computeModelOutputs(double currentHeading);
+    double computeModelOutputs(double currentHeading,
+    double start, double currentVelocity, std::vector<double> *time);
+
 
  private:
+    double currentHeading;
+    double targetHeading;
+    double currentVelocity;
+    double arcLength;
     double tread;
     double wheelBase;
     double radiusOfCurvature;
     double maxSteerAngle;
     double dt;
-    double targetHeading;
+    // double targetHeading;
 };
 
 #endif  // INCLUDE_ACKERMANN_HPP_
