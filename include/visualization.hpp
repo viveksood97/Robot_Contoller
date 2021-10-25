@@ -12,45 +12,32 @@
 
 #include <iostream>
 #include <vector>
+#include <utility>
 
 
 /// @class Visualization
 /// @brief Implementation of an Visualization Class
 class Visualization {
  public:
-    // @brief Setter for a vector of velocities.
-    /// @param[in] v vector of velocities
-    /// @return true/false
-    bool setVelocities(std::vector<double> v);
-
-    // @brief Setter for a vector of headings.
-    /// @param[in] h vector of headings
-    /// @return true/false
-    bool setHeadings(std::vector<double> h);
-
-    // @brief Setter for a vector of time.
-    /// @param[in] t vector of time
-    /// @return true/false
-    bool setTime(std::vector<double> t);
-
+    bool setTargetVelocity(double v);
+    bool setTargetHeading(double h);
+    bool printOutputs(double currentHeading, double currentVelocity);
     /// @brief plots velocity vs time graph
     /// @param[in] _velocities vector of velocities
     /// @param[in] _time vector of time
     /// @return true/false
     bool plotVelocities
-    (std::vector<double> _velocities, std::vector<double> _time);
+    (const std::vector<std::pair<double, double>>& velocities);
 
     /// @brief plots heading vs time graph
     /// @param[in] _headings vector of headings
     /// @param[in] _time vector of time
     /// @return true/false
     bool plotHeadings
-    (std::vector<double> _headings, std::vector<double> _time);
-
+    (const std::vector<std::pair<double, double>>& headings);
  private:
-    std::vector<double> velocities;
-    std::vector<double> headings;
-    std::vector<double> time;
+    double targetVelocity;
+    double targetHeading;
 };
 
 

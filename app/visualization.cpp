@@ -7,30 +7,56 @@
 /// @brief Driver: Vivek Sood Navigator: Charu Sharma
 /// @date   2021-10-16
 
-#include <visualization.hpp>
-#include "../lib/include/pbPlots.hpp"
-#include "../lib/include/supportLib.hpp"
+#include "visualization.hpp"
+#include "gnuplot-iostream.h"
 
-bool Visualization::setVelocities(std::vector<double> v) {
-    return true;
+#define GREEN   "\033[32m"
+#define RESET   "\033[0m"
+#define YELLOW  "\033[33m"
+
+bool Visualization::setTargetHeading(double h) {
+  targetHeading = h;
+  return true;
+}
+bool Visualization::setTargetVelocity(double v) {
+  targetVelocity = v;
+  return true;
+}
+bool Visualization::printOutputs
+(double currentHeading, double currentVelocity) {
+  std::cout << GREEN << "[Velocity] " << RESET << "Current: "<<
+  currentVelocity << " Target: " << targetVelocity << std::endl;
+  std::cout<< GREEN << "[Heading] " << RESET << "Current: "<<
+  currentHeading << " Target: " << targetHeading << "\n" << std::endl;
+  return true;
 }
 
-bool Visualization::setHeadings(std::vector<double> h) {
-    return true;
-}
-
-bool Visualization::setTime(std::vector<double> t) {
+bool Visualization::plotHeadings
+(const std::vector<std::pair<double, double>>& headings) {
+    Gnuplot gp;
+    gp << "set xrange [0:10]\nset yrange [0:100]\n";
+    gp << "set title \"Steering angle Convergence\"\n";
+    gp << "set pointsize 1\n";
+    gp << "set xlabel \"Time\"\n";
+    gp << "set ylabel \"Heading Angle\"\n";
+    gp << "set key outside\n";
+    gp << "plot" << gp.file1d(headings) << "with points title 'Heading' lc 3, "
+    << targetHeading << " title 'Target Heading' lt 1 lc 4" << std::endl;
     return true;
 }
 
 bool Visualization::plotVelocities
-(std::vector<double> _velocities, std::vector<double> _time) {
+(const std::vector<std::pair<double, double>>& velocities) {
+    Gnuplot gp;
+    gp << "set xrange [0.005:0.01]\nset yrange [0:45]\n";
+    gp << "set title \"Velocity Convergence\"\n";
+    gp << "set pointsize 1\n";
+    gp << "set xlabel \"Time\"\n";
+    gp << "set ylabel \"Current Velocity\"\n";
+    gp << "set key outside\n";
+    gp << "plot" << gp.file1d(velocities)
+       << "with lp title 'Current Velocity' lc 3, "
+       << targetVelocity << " title 'Set Point' lt 1 lc 4" << std::endl;
     return true;
 }
-
-bool Visualization::plotHeadings
-(std::vector<double> _headings, std::vector<double> _time) {
-    return true;
-}
-
 
