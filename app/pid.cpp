@@ -30,7 +30,20 @@
         return true;
     }
     double PID::computePID(double currentVelocity) {
-        return 6.9;
+        prevError = targetVelocity - currentVelocity;
+        double p_term = kp * prevError;
+
+        cumulativeError = cumulativeError + prevError * dt;
+        double i_term = ki * cumulativeError;
+
+        double d_term = kd * (cumulativeError - prevError) / dt;
+
+        double output = p_term + i_term + d_term;
+
+        cumulativeError = prevError;
+
+        currentVelocity = currentVelocity + output;  // newVelocity
+        return currentVelocity;
     }
 
 
