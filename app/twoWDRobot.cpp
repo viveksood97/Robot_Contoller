@@ -19,9 +19,6 @@ bool TwoWDRobot::
 computeHeading(double _initialHeading, double _targetHeading, double _initialVelocity) {
     Ackermann ackermann;
 
-    // std::cout << "Initial heading= " <<_initialHeading << std::endl;
-    // std::cout << "Target heading= " << _targetHeading << std::endl;
-
     clock_t startTime = clock();
     ackermann.setTargetHeading(_targetHeading);
     ackermann.calculateROC();
@@ -29,14 +26,10 @@ computeHeading(double _initialHeading, double _targetHeading, double _initialVel
     ackermann.calculateAngles(&innerWheelAngle, &outerWheelAngle);
 
     while (abs(_targetHeading - _initialHeading) > 0.01) {
-        // std::cout << "difference " <<
-        // (_targetHeading - _initialHeading) << std::endl;
         _initialHeading = ackermann.computeModelOutputs(_initialHeading,
                                             startTime, _initialVelocity, &time);
 
         headings.push_back(_initialHeading);
-        // for (auto i = headings.begin(); i != headings.end(); i++)
-        // std::cout << "Headings " << *i << " " << std::endl;
     }
     std::cout << "Heading " << _initialHeading << std::endl;
 
@@ -53,8 +46,6 @@ computeVelocity(double _initialVelocity, double _targetVelocity) {
         _initialVelocity = pid.computePID(_initialVelocity);
 
         velocities.push_back(_initialVelocity);
-        // for (auto i = velocities.begin(); i != velocities.end(); i++)
-        // std::cout << "Velocities " << *i << " " << std::endl;
     }
     return true;
 }
