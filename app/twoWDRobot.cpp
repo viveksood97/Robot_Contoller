@@ -13,50 +13,73 @@
 #include "pid.hpp"
 #include "ackermann.hpp"
 #include "visualization.hpp"
+#include "gnuplot-iostream.h"
 
 
-bool TwoWDRobot::
-computeHeading(double _initialHeading, double _targetHeading, double _initialVelocity) {
+
+
+bool TwoWDRobot::setTargetHeading(double _targetHeading) {
+    targetHeading = _targetHeading;
+    return true;
+}
+bool TwoWDRobot::setTargetVelocity(double _targetVelocity) {
+    targetVelocity = _targetVelocity;
+    return true;
+}
+bool TwoWDRobot::computeOutput(double initialHeading, double initialVelocity) {
     Ackermann ackermann;
-
+    PID pid;
+    Visualization visuals;
     clock_t startTime = clock();
-    ackermann.setTargetHeading(_targetHeading);
+
+    double currentHeading = initialHeading;
+    double currentVelocity = initialVelocity;
+
+    std::vector<std::pair<double, double>> headings;
+    headings.push_back(std::make_pair((static_cast<double>
+            (0)/CLOCKS_PER_SEC), currentHeading));
+    std::vector<std::pair<double, double>> velocities;
+    velocities.push_back(std::make_pair((static_cast<double>
+            (0)/CLOCKS_PER_SEC), currentVelocity));
+
+    visuals.setTargetHeading(targetHeading);
+    visuals.setTargetVelocity(targetVelocity);
+    pid.setTargetVelocity(targetVelocity);
+    pid.setKp(0.5);
+    pid.setKd(0.001);
+    pid.setKi(0.005);
+    ackermann.setTargetHeading(targetVelocity);
     ackermann.calculateROC();
     ackermann.calculateArc();
     ackermann.calculateAngles(&innerWheelAngle, &outerWheelAngle);
 
-    while (abs(_targetHeading - _initialHeading) > 0.01) {
-        _initialHeading = ackermann.computeModelOutputs(_initialHeading,
-                                            startTime, _initialVelocity, &time);
+    while (true) {
+        double headingDiff = std::abs(targetHeading - currentHeading);
+        double velocityDiff = std::abs(targetVelocity - currentVelocity);
 
-        headings.push_back(_initialHeading);
+        clock_t endTime = clock();
+        double dt = (static_cast<double>
+        (endTime - startTime)) / CLOCKS_PER_SEC;
+
+        if (velocityDiff > 0.01) {
+            currentVelocity = pid.computePID(currentVelocity, dt);
+            velocities.push_back(std::make_pair((static_cast<double>
+           (endTime)/CLOCKS_PER_SEC), currentVelocity));
+        }
+        if (headingDiff > 0.1) {
+           currentHeading = ackermann.computeModelOutputs(targetHeading,
+           currentVelocity, dt);
+           headings.push_back(std::make_pair((static_cast<double>
+           (endTime)/CLOCKS_PER_SEC), currentHeading));
+
+        }
+        visuals.printOutputs(currentHeading, currentVelocity);
+        if (headingDiff < 0.1 && velocityDiff < 0.01) {
+            visuals.plotHeadings(headings);
+            visuals.plotVelocities(velocities);
+            break;
+        }
     }
-    std::cout << "Heading " << _initialHeading << std::endl;
 
     return true;
 }
-bool TwoWDRobot::
-computeVelocity(double _initialVelocity, double _targetVelocity) {
-    PID pid;
-
-    std::cout << "Initial velocity = " << _initialVelocity << std::endl;
-    std::cout << "Target velocity = " << _targetVelocity << std::endl;
-
-    while (abs(targetVelocity - _initialVelocity) > 0.1) {
-        _initialVelocity = pid.computePID(_initialVelocity);
-
-        velocities.push_back(_initialVelocity);
-    }
-    return true;
-}
-bool TwoWDRobot::setDt(double timeInterval) {
-    return true;
-}
-bool TwoWDRobot::visualize() {
-        Visualization visuals;
-
-        // visuals.plotVelocities(velocities, time);
-        // visuals.plotHeadings(headings, time);
-
-        return true;
-    }
