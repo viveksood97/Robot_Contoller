@@ -20,8 +20,10 @@ int main() {
 
     // std::cout << ackermann.computeModelOutputs(5) << std::endl;
     // std::cout << pid.computePID(5) << std::endl;
-    std::cout << "Heading: " << robot.computeHeading(10, 10) << "\n"
-    << "Velocity: " << robot.computeVelocity(10, 10) << std::endl;
+
+    std::cout << "Heading: " << "\n" << robot.computeHeading(10, 60, 10) << "\n"
+    << "Velocity: " << robot.computeVelocity(10, 20) << std::endl;
+
     return 0;
 }
 
