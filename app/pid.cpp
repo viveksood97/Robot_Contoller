@@ -25,22 +25,18 @@
         ki = iGain;
         return true;
     }
-    bool PID::setDt(double timeInterval) {
-        dt = timeInterval;
-        return true;
-    }
     bool PID::setTargetVelocity(double velocity) {
         targetVelocity = velocity;
         return true;
     }
-    double PID::computePID(double currentVelocity) {
+    double PID::computePID(double currentVelocity, double t) {
         prevError = targetVelocity - currentVelocity;
         double p_term = kp * prevError;
 
-        cumulativeError = cumulativeError + prevError * dt;
+        cumulativeError = cumulativeError + prevError * t;
         double i_term = ki * cumulativeError;
 
-        double d_term = kd * (cumulativeError - prevError) / dt;
+        double d_term = kd * (cumulativeError - prevError) / t;
 
         double output = p_term + i_term + d_term;
 
