@@ -52,16 +52,9 @@
     }
 
     double Ackermann::computeModelOutputs(double currentHeading,
-    double start, double currentVelocity, std::vector<double> *time) {
-
-        //   while (abs(targetHeading - currentHeading) > 0.01) {
-        clock_t end = clock();
-        double dt = (static_cast<double> (end - start)) / CLOCKS_PER_SEC;
-        time->push_back((static_cast<double> (end)) / CLOCKS_PER_SEC);
-
+    double currentVelocity, double dt) {
         double distTravelled = currentVelocity * dt;
-        currentHeading  = (distTravelled * targetHeading/ arcLength);
-
+        currentHeading  =(distTravelled * targetHeading/ arcLength);
         return currentHeading;
 }
 

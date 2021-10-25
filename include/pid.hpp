@@ -31,11 +31,6 @@ class PID {
     /// @return true/false
     bool setKi(double iGain);
 
-    /// @brief Setter for time interval.
-    /// @param[in] timeInterval time interval
-    /// @return true/false
-    bool setDt(double timeInterval);
-
     /// @brief Setter for targetVelocity.
     /// @param[in] velocity target velocity of the robot
     /// @return true/false
@@ -44,13 +39,12 @@ class PID {
     /// @brief Computes the control output using PID controller
     /// @param[in] currentVelocity current velocity of the robot
     /// @return newVelocity
-    double computePID(double currentVelocity);
+    double computePID(double currentVelocity, double t);
 
  private:
     double kp;
     double ki;
     double kd;
-    double dt;
     double cumulativeError = 0;
     double prevError = 0.0;
     double targetVelocity;

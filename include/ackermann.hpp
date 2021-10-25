@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <vector>
+#include <utility>
 
 /// @class Ackermann
 /// @brief Implementation of an Ackermann Controller
@@ -56,13 +57,12 @@ class Ackermann {
     /// @param[in] currentHeading current heading of the robot
     /// @return newHeading
     double computeModelOutputs(double currentHeading,
-    double start, double currentVelocity, std::vector<double> *time);
+    double currentVelocity, double dt);
 
 
  private:
     double currentHeading;
     double targetHeading;
-    double currentVelocity;
     double arcLength;
     double tread;
     double wheelBase;
