@@ -5,7 +5,7 @@
  * @date 2021-10-16
  * @copyright Copyright (c) 2021
  *
- * ENPM808X Midterm - Phase 1
+ * ENPM808X Midterm - Phase 2
  *
  */
 
@@ -15,15 +15,22 @@
 PID pid;
 
 TEST(PID, testSetAttributes) {
-    EXPECT_TRUE(pid.setKp(1.2));
-    EXPECT_TRUE(pid.setKi(1.2));
-    EXPECT_TRUE(pid.setKd(1.2));
-    EXPECT_TRUE(pid.setDt(0.1));
-    EXPECT_TRUE(pid.setTargetVelocity(1.2));
+    EXPECT_TRUE(pid.setKp(0.5));
+    EXPECT_TRUE(pid.setKi(0.005));
+    EXPECT_TRUE(pid.setKd(0.001));
+    EXPECT_TRUE(pid.setTargetVelocity(5));
 }
 
 TEST(PID, testComputePID) {
-    double expectedResult = 6.9;
-    EXPECT_TRUE((pid.computePID(10) - expectedResult >= -0.1)
-    && (pid.computePID(10) - expectedResult <= 0.1));
+    double testCurrentVelocity = 0;
+    double velocityDiff;
+    while (true) {
+        velocityDiff = 5 - testCurrentVelocity;
+        if (velocityDiff > 0.01) {
+            testCurrentVelocity = pid.computePID(testCurrentVelocity, 0.01);
+        } else {
+            break;
+        }
+    }
+    EXPECT_TRUE(velocityDiff < 0.01);
 }

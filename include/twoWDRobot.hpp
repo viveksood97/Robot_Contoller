@@ -1,48 +1,52 @@
-// Copyright (c) No idea about this :). No copyright.
+// Copyright (c) 2021 Charu Sharma and Vivek Sood
 // Licensed under the MIT License.
 
 
 /// @file   twoWDRobot.hpp
 /// @authors Vivek Sood, Charu Sharma
-/// @brief Driver: Vivek Sood Navigator: Charu Sharma
-/// @date   2021-10-16
+/// @brief Phase1- Driver: Vivek Sood Navigator: Charu Sharma
+/// @brief Phase2- Driver: Charu Sharma Navigator: Vivek Sood
+
 
 #ifndef INCLUDE_TWOWDROBOT_HPP_
 #define INCLUDE_TWOWDROBOT_HPP_
 
 #include <iostream>
-
+#include <vector>
+#include <utility>
 /// @class TwoWDRobot
 /// @brief Implementation of an TwoWDRobot Class
 class TwoWDRobot {
  public:
-    /// @brief Computes the new Heading using
-    /// the Ackemann class method computeAckermann
-    /// @param[in] _initialHeading starting heading of the robot
-    /// @param[in] _targetHeading target heading of the robot
-    /// @return true/false
-    bool computeHeading(double _initialHeading, double _targetHeading);
+    /// @brief Constructor for TwoWDRobot class.
+    TwoWDRobot();
+    /// @brief Destructor for TwoWDRobot class.
+    ~TwoWDRobot();
 
-    /// @brief Computes the new Velocity using
-    /// the PID class method computePID
-    /// @param[in] _initialVelocity starting Velocity of the robot
+    /// @brief Setter for Target Heading.
+    /// @param[in] _targetheading target heading of the robot
+    /// @return true/false
+    bool setTargetHeading(double _targetHeading);
+
+    /// @brief Setter for target Velocity.
     /// @param[in] _targetVelocity target Velocity of the robot
     /// @return true/false
-    bool computeVelocity(double _initialVelocity, double _targetVelocity);
+    bool setTargetVelocity(double _targetVelocity);
 
-    /// @brief Setter for time interval.
-    /// @param[in] timeInterval time interval
+    /// @brief method to compute the outputs
+    /// @param[in] initialHeading Initial Heading
+    /// @param[in] initialVelocity Initial Velocity of the robot
+    /// @param[in] flag flag for testing
     /// @return true/false
-    bool setDt(double timeInterval);
+    bool computeOutput(double initialHeading,
+    double initialVelocity, bool flag);
+
 
  private:
     double targetHeading;
     double targetVelocity;
-    double initialHeading;
-    double initialVelocity;
     double innerWheelAngle;
     double outerWheelAngle;
-    double dt;
 };
 
 

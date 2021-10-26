@@ -14,15 +14,36 @@
 Ackermann ackermann;
 
 TEST(AckermannTests, testSetAttributes) {
-    Ackermann ackermann;
     EXPECT_TRUE(ackermann.setRobotProps(1.2, 1.2, 1.2, 1.2));
-    EXPECT_TRUE(ackermann.setDt(0.1));
     EXPECT_TRUE(ackermann.setTargetHeading(1.2));
 }
 
-TEST(AckermannTests, testComputeModelOutputs) {
-    double expectedResult = 4.20;
-    EXPECT_TRUE((ackermann.computeModelOutputs(10) - expectedResult >= -0.1)
-    && (ackermann.computeModelOutputs(10) - expectedResult <= 0.1));
+TEST(AckermannTests, testComputeMethods) {
+    EXPECT_TRUE(ackermann.calculateROC());
+    EXPECT_TRUE(ackermann.calculateArc());
+    double dummy = 10;
+    EXPECT_TRUE(ackermann.calculateAngles(&dummy, &dummy));
 }
 
+
+TEST(AckermannTests, testComputeModelOutputs) {
+    double testTargetHeading = 30;
+    double testCurrentHeading = 0;
+    clock_t startTime = clock();
+    double headingDiff;
+
+    while (true) {
+        headingDiff = std::abs(testTargetHeading - testCurrentHeading);
+        clock_t endTime = clock();
+        double dt = (static_cast<double>
+        (endTime - startTime)) / CLOCKS_PER_SEC;
+
+        if (headingDiff > 0.1) {
+           testCurrentHeading = ackermann.computeModelOutputs(testTargetHeading,
+           20, dt);
+        } else {
+            break;
+        }
+    }
+    EXPECT_TRUE(headingDiff < 0.1);
+}
