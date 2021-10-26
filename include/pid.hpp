@@ -1,21 +1,26 @@
-// Copyright (c) No idea about this :). No copyright.
+// Copyright (c) 2021 Charu Sharma and Vivek Sood
 // Licensed under the MIT License.
 
 
 /// @file   pid.hpp
 /// @authors Vivek Sood, Charu Sharma
-/// @brief Driver: Vivek Sood Navigator: Charu Sharma
-/// @date   2021-10-16
+/// @brief Phase1- Driver: Vivek Sood Navigator: Charu Sharma
+/// @brief Phase2- Driver: Charu Sharma Navigator: Vivek Sood
 
 #ifndef INCLUDE_PID_HPP_
 #define INCLUDE_PID_HPP_
 
 #include <iostream>
 
-/// @class PIDController
+/// @class PID
 /// @brief Implementation of a PID controller
 class PID {
  public:
+    /// @brief Constructor for PID class.
+    PID();
+    /// @brief Destructor for PID class.
+    ~PID();
+
     /// @brief Setter for proportional gain.
     /// @param[in] pGain proportional gain
     /// @return true/false
@@ -31,11 +36,6 @@ class PID {
     /// @return true/false
     bool setKi(double iGain);
 
-    /// @brief Setter for time interval.
-    /// @param[in] timeInterval time interval
-    /// @return true/false
-    bool setDt(double timeInterval);
-
     /// @brief Setter for targetVelocity.
     /// @param[in] velocity target velocity of the robot
     /// @return true/false
@@ -44,18 +44,15 @@ class PID {
     /// @brief Computes the control output using PID controller
     /// @param[in] currentVelocity current velocity of the robot
     /// @return newVelocity
-    double computePID(double currentVelocity);
+    double computePID(double currentVelocity, double t);
 
  private:
     double kp;
     double ki;
     double kd;
-    double dt;
     double cumulativeError;
     double prevError;
     double targetVelocity;
 };
-
-
 
 #endif  // INCLUDE_PID_HPP_

@@ -12,15 +12,21 @@ Implementation of an \hyperlink{classVisualization}{Visualization} Class.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{classVisualization_a5a77f1a16a69153aa4671e8c56e1cbc9}{set\+Velocities} (std\+::vector$<$ double $>$ v)
-\item 
-bool \hyperlink{classVisualization_a012238010c15a864fe592de3c8a6a7fa}{set\+Headings} (std\+::vector$<$ double $>$ h)
-\item 
-bool \hyperlink{classVisualization_a39cc1a94ab49ffc11a1542ef9646858a}{set\+Time} (std\+::vector$<$ double $>$ t)
-\item 
-bool \hyperlink{classVisualization_a91068dbd17952cf42439b377f1a2b1ca}{plot\+Velocities} (std\+::vector$<$ double $>$ \+\_\+velocities, std\+::vector$<$ double $>$ \+\_\+time)
+\mbox{\Hypertarget{classVisualization_a8497cb6ad7ad879f25ebb46c0f2485e0}\label{classVisualization_a8497cb6ad7ad879f25ebb46c0f2485e0}} 
+\hyperlink{classVisualization_a8497cb6ad7ad879f25ebb46c0f2485e0}{Visualization} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classVisualization}{Visualization} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVisualization_a1b3dc8c07a781aaf8f4cbe95031e191c}\label{classVisualization_a1b3dc8c07a781aaf8f4cbe95031e191c}} 
+\hyperlink{classVisualization_a1b3dc8c07a781aaf8f4cbe95031e191c}{$\sim$\+Visualization} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \hyperlink{classVisualization}{Visualization} class. \end{DoxyCompactList}\item 
+bool \hyperlink{classVisualization_a2da76ae59decde5ba33e4568c59b599c}{set\+Target\+Velocity} (double v)
+\begin{DoxyCompactList}\small\item\em Setter for target\+Velocity. \end{DoxyCompactList}\item 
+bool \hyperlink{classVisualization_ad56ef7f27e4b904cb719d6286795a791}{set\+Target\+Heading} (double h)
+\begin{DoxyCompactList}\small\item\em Setter for target\+Heading. \end{DoxyCompactList}\item 
+bool \hyperlink{classVisualization_a91e89fa4bd219e52963442358cbb5902}{print\+Outputs} (double current\+Heading, double current\+Velocity)
+\begin{DoxyCompactList}\small\item\em method for printing outputs. \end{DoxyCompactList}\item 
+bool \hyperlink{classVisualization_a4c5e38de378025c6ab9343204faf3fd9}{plot\+Velocities} (const std\+::vector$<$ std\+::pair$<$ double, double $>$$>$ \&velocities)
 \begin{DoxyCompactList}\small\item\em plots velocity vs time graph \end{DoxyCompactList}\item 
-bool \hyperlink{classVisualization_a6896d287f4575a5ccc5a4370e36dbb19}{plot\+Headings} (std\+::vector$<$ double $>$ \+\_\+headings, std\+::vector$<$ double $>$ \+\_\+time)
+bool \hyperlink{classVisualization_ae176b32c8d22df0a8f6bf8f5674ecdc6}{plot\+Headings} (const std\+::vector$<$ std\+::pair$<$ double, double $>$$>$ \&headings)
 \begin{DoxyCompactList}\small\item\em plots heading vs time graph \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -28,11 +34,11 @@ bool \hyperlink{classVisualization_a6896d287f4575a5ccc5a4370e36dbb19}{plot\+Head
 Implementation of an \hyperlink{classVisualization}{Visualization} Class. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classVisualization_a6896d287f4575a5ccc5a4370e36dbb19}\label{classVisualization_a6896d287f4575a5ccc5a4370e36dbb19}} 
+\mbox{\Hypertarget{classVisualization_ae176b32c8d22df0a8f6bf8f5674ecdc6}\label{classVisualization_ae176b32c8d22df0a8f6bf8f5674ecdc6}} 
 \index{Visualization@{Visualization}!plot\+Headings@{plot\+Headings}}
 \index{plot\+Headings@{plot\+Headings}!Visualization@{Visualization}}
 \subsubsection{\texorpdfstring{plot\+Headings()}{plotHeadings()}}
-{\footnotesize\ttfamily bool Visualization\+::plot\+Headings (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{\+\_\+headings,  }\item[{std\+::vector$<$ double $>$}]{\+\_\+time }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Visualization\+::plot\+Headings (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ double, double $>$$>$ \&}]{headings }\end{DoxyParamCaption})}
 
 
 
@@ -48,11 +54,11 @@ plots heading vs time graph
 \begin{DoxyReturn}{Returns}
 true/false 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classVisualization_a91068dbd17952cf42439b377f1a2b1ca}\label{classVisualization_a91068dbd17952cf42439b377f1a2b1ca}} 
+\mbox{\Hypertarget{classVisualization_a4c5e38de378025c6ab9343204faf3fd9}\label{classVisualization_a4c5e38de378025c6ab9343204faf3fd9}} 
 \index{Visualization@{Visualization}!plot\+Velocities@{plot\+Velocities}}
 \index{plot\+Velocities@{plot\+Velocities}!Visualization@{Visualization}}
 \subsubsection{\texorpdfstring{plot\+Velocities()}{plotVelocities()}}
-{\footnotesize\ttfamily bool Visualization\+::plot\+Velocities (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{\+\_\+velocities,  }\item[{std\+::vector$<$ double $>$}]{\+\_\+time }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Visualization\+::plot\+Velocities (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ double, double $>$$>$ \&}]{velocities }\end{DoxyParamCaption})}
 
 
 
@@ -68,43 +74,57 @@ plots velocity vs time graph
 \begin{DoxyReturn}{Returns}
 true/false 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classVisualization_a012238010c15a864fe592de3c8a6a7fa}\label{classVisualization_a012238010c15a864fe592de3c8a6a7fa}} 
-\index{Visualization@{Visualization}!set\+Headings@{set\+Headings}}
-\index{set\+Headings@{set\+Headings}!Visualization@{Visualization}}
-\subsubsection{\texorpdfstring{set\+Headings()}{setHeadings()}}
-{\footnotesize\ttfamily bool Visualization\+::set\+Headings (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{h }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classVisualization_a91e89fa4bd219e52963442358cbb5902}\label{classVisualization_a91e89fa4bd219e52963442358cbb5902}} 
+\index{Visualization@{Visualization}!print\+Outputs@{print\+Outputs}}
+\index{print\+Outputs@{print\+Outputs}!Visualization@{Visualization}}
+\subsubsection{\texorpdfstring{print\+Outputs()}{printOutputs()}}
+{\footnotesize\ttfamily bool Visualization\+::print\+Outputs (\begin{DoxyParamCaption}\item[{double}]{current\+Heading,  }\item[{double}]{current\+Velocity }\end{DoxyParamCaption})}
+
+
+
+method for printing outputs. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em h} & vector of headings \\
+\mbox{\tt in}  & {\em current\+Heading} & current heading of the robot \\
+\hline
+\mbox{\tt in}  & {\em current\+Velocity} & current velocity of the robot \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true/false 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classVisualization_a39cc1a94ab49ffc11a1542ef9646858a}\label{classVisualization_a39cc1a94ab49ffc11a1542ef9646858a}} 
-\index{Visualization@{Visualization}!set\+Time@{set\+Time}}
-\index{set\+Time@{set\+Time}!Visualization@{Visualization}}
-\subsubsection{\texorpdfstring{set\+Time()}{setTime()}}
-{\footnotesize\ttfamily bool Visualization\+::set\+Time (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{t }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classVisualization_ad56ef7f27e4b904cb719d6286795a791}\label{classVisualization_ad56ef7f27e4b904cb719d6286795a791}} 
+\index{Visualization@{Visualization}!set\+Target\+Heading@{set\+Target\+Heading}}
+\index{set\+Target\+Heading@{set\+Target\+Heading}!Visualization@{Visualization}}
+\subsubsection{\texorpdfstring{set\+Target\+Heading()}{setTargetHeading()}}
+{\footnotesize\ttfamily bool Visualization\+::set\+Target\+Heading (\begin{DoxyParamCaption}\item[{double}]{h }\end{DoxyParamCaption})}
+
+
+
+Setter for target\+Heading. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em t} & vector of time \\
+\mbox{\tt in}  & {\em h} & current heading of the robot \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true/false 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classVisualization_a5a77f1a16a69153aa4671e8c56e1cbc9}\label{classVisualization_a5a77f1a16a69153aa4671e8c56e1cbc9}} 
-\index{Visualization@{Visualization}!set\+Velocities@{set\+Velocities}}
-\index{set\+Velocities@{set\+Velocities}!Visualization@{Visualization}}
-\subsubsection{\texorpdfstring{set\+Velocities()}{setVelocities()}}
-{\footnotesize\ttfamily bool Visualization\+::set\+Velocities (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classVisualization_a2da76ae59decde5ba33e4568c59b599c}\label{classVisualization_a2da76ae59decde5ba33e4568c59b599c}} 
+\index{Visualization@{Visualization}!set\+Target\+Velocity@{set\+Target\+Velocity}}
+\index{set\+Target\+Velocity@{set\+Target\+Velocity}!Visualization@{Visualization}}
+\subsubsection{\texorpdfstring{set\+Target\+Velocity()}{setTargetVelocity()}}
+{\footnotesize\ttfamily bool Visualization\+::set\+Target\+Velocity (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption})}
+
+
+
+Setter for target\+Velocity. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em v} & vector of velocities \\
+\mbox{\tt in}  & {\em v} & current velocity of the robot \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -115,4 +135,4 @@ true/false
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 include/\hyperlink{visualization_8hpp}{visualization.\+hpp}\item 
-app/visualization.\+cpp\end{DoxyCompactItemize}
+app/\hyperlink{visualization_8cpp}{visualization.\+cpp}\end{DoxyCompactItemize}

@@ -65,9 +65,21 @@ $(function() {
 <div class="title">PID Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implementation of a <a class="el" href="classPID.html" title="Implementation of a PID controller. ">PID</a> controller.  
+ <a href="classPID.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="pid_8hpp_source.html">pid.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a0311b6f7de348499ce24e53ba353514a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPID.html#a0311b6f7de348499ce24e53ba353514a">PID</a> ()</td></tr>
+<tr class="memdesc:a0311b6f7de348499ce24e53ba353514a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classPID.html" title="Implementation of a PID controller. ">PID</a> class.  <a href="#a0311b6f7de348499ce24e53ba353514a">More...</a><br /></td></tr>
+<tr class="separator:a0311b6f7de348499ce24e53ba353514a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d389fc5b88d881bc25f5dafd360441"><td class="memItemLeft" align="right" valign="top"><a id="ab7d389fc5b88d881bc25f5dafd360441"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPID.html#ab7d389fc5b88d881bc25f5dafd360441">~PID</a> ()</td></tr>
+<tr class="memdesc:ab7d389fc5b88d881bc25f5dafd360441"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for <a class="el" href="classPID.html" title="Implementation of a PID controller. ">PID</a> class. <br /></td></tr>
+<tr class="separator:ab7d389fc5b88d881bc25f5dafd360441"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2a06a6aacd89993347f6adbc906e9a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPID.html#af2a06a6aacd89993347f6adbc906e9a2">setKp</a> (double pGain)</td></tr>
 <tr class="memdesc:af2a06a6aacd89993347f6adbc906e9a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for proportional gain.  <a href="#af2a06a6aacd89993347f6adbc906e9a2">More...</a><br /></td></tr>
 <tr class="separator:af2a06a6aacd89993347f6adbc906e9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -77,19 +89,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af0d5d19e1657530e1cbca6ed675629e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPID.html#af0d5d19e1657530e1cbca6ed675629e0">setKi</a> (double iGain)</td></tr>
 <tr class="memdesc:af0d5d19e1657530e1cbca6ed675629e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for integral gain.  <a href="#af0d5d19e1657530e1cbca6ed675629e0">More...</a><br /></td></tr>
 <tr class="separator:af0d5d19e1657530e1cbca6ed675629e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a182527b0cc7c5869fbb14508b9b35c41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPID.html#a182527b0cc7c5869fbb14508b9b35c41">setDt</a> (double timeInterval)</td></tr>
-<tr class="memdesc:a182527b0cc7c5869fbb14508b9b35c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for time interval.  <a href="#a182527b0cc7c5869fbb14508b9b35c41">More...</a><br /></td></tr>
-<tr class="separator:a182527b0cc7c5869fbb14508b9b35c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a430bbe62eb2f904eb45ce081d96dc294"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPID.html#a430bbe62eb2f904eb45ce081d96dc294">setTargetVelocity</a> (double velocity)</td></tr>
 <tr class="memdesc:a430bbe62eb2f904eb45ce081d96dc294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for targetVelocity.  <a href="#a430bbe62eb2f904eb45ce081d96dc294">More...</a><br /></td></tr>
 <tr class="separator:a430bbe62eb2f904eb45ce081d96dc294"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7eaae8c7f3a11bb4d53ff8ee17df10f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPID.html#aa7eaae8c7f3a11bb4d53ff8ee17df10f">computePID</a> (double currentVelocity)</td></tr>
-<tr class="memdesc:aa7eaae8c7f3a11bb4d53ff8ee17df10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the control output using <a class="el" href="classPID.html">PID</a> controller.  <a href="#aa7eaae8c7f3a11bb4d53ff8ee17df10f">More...</a><br /></td></tr>
-<tr class="separator:aa7eaae8c7f3a11bb4d53ff8ee17df10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78583fbe02f451f937db678afb5d1504"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPID.html#a78583fbe02f451f937db678afb5d1504">computePID</a> (double currentVelocity, double t)</td></tr>
+<tr class="memdesc:a78583fbe02f451f937db678afb5d1504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the control output using <a class="el" href="classPID.html" title="Implementation of a PID controller. ">PID</a> controller.  <a href="#a78583fbe02f451f937db678afb5d1504">More...</a><br /></td></tr>
+<tr class="separator:a78583fbe02f451f937db678afb5d1504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation of a <a class="el" href="classPID.html" title="Implementation of a PID controller. ">PID</a> controller. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0311b6f7de348499ce24e53ba353514a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0311b6f7de348499ce24e53ba353514a">&#9670;&nbsp;</a></span>PID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PID::PID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for <a class="el" href="classPID.html" title="Implementation of a PID controller. ">PID</a> class. </p>
+<p>Implements <a class="el" href="classPID.html" title="Implementation of a PID controller. ">PID</a> on the <a class="el" href="classTwoWDRobot.html" title="Implementation of an TwoWDRobot Class. ">TwoWDRobot</a> class. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa7eaae8c7f3a11bb4d53ff8ee17df10f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7eaae8c7f3a11bb4d53ff8ee17df10f">&#9670;&nbsp;</a></span>computePID()</h2>
+<a id="a78583fbe02f451f937db678afb5d1504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78583fbe02f451f937db678afb5d1504">&#9670;&nbsp;</a></span>computePID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -98,13 +130,23 @@ Public Member Functions</h2></td></tr>
           <td class="memname">double PID::computePID </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>currentVelocity</em></td><td>)</td>
+          <td class="paramname"><em>currentVelocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Computes the control output using <a class="el" href="classPID.html">PID</a> controller. </p>
+<p>Computes the control output using <a class="el" href="classPID.html" title="Implementation of a PID controller. ">PID</a> controller. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">currentVelocity</td><td>current velocity of the robot </td></tr>
@@ -112,33 +154,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>newVelocity </dd></dl>
-
-</div>
-</div>
-<a id="a182527b0cc7c5869fbb14508b9b35c41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a182527b0cc7c5869fbb14508b9b35c41">&#9670;&nbsp;</a></span>setDt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool PID::setDt </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>timeInterval</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Setter for time interval. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeInterval</td><td>time interval </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true/false </dd></dl>
 
 </div>
 </div>

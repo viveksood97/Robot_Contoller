@@ -4,53 +4,59 @@
 
 /// @file   visualization.hpp
 /// @authors Vivek Sood, Charu Sharma
-/// @brief Driver: Vivek Sood Navigator: Charu Sharma
-/// @date   2021-10-17
+/// @brief Phase1- Driver: Vivek Sood Navigator: Charu Sharma
+/// @brief Phase2- Driver: Charu Sharma Navigator: Vivek Sood
 
 #ifndef  INCLUDE_VISUALIZATION_HPP_
 #define  INCLUDE_VISUALIZATION_HPP_
 
 #include <iostream>
 #include <vector>
+#include <utility>
 
 
 /// @class Visualization
 /// @brief Implementation of an Visualization Class
 class Visualization {
  public:
-    // @brief Setter for a vector of velocities.
-    /// @param[in] v vector of velocities
-    /// @return true/false
-    bool setVelocities(std::vector<double> v);
+    /// @brief Constructor for Visualization class.
+    Visualization();
+    /// @brief Destructor for Visualization class.
+    ~Visualization();
 
-    // @brief Setter for a vector of headings.
-    /// @param[in] h vector of headings
+    /// @brief Setter for targetVelocity.
+    /// @param[in] v current velocity of the robot
     /// @return true/false
-    bool setHeadings(std::vector<double> h);
+    bool setTargetVelocity(double v);
 
-    // @brief Setter for a vector of time.
-    /// @param[in] t vector of time
+    /// @brief Setter for targetHeading.
+    /// @param[in] h current heading of the robot
     /// @return true/false
-    bool setTime(std::vector<double> t);
+    bool setTargetHeading(double h);
+
+    /// @brief method for printing outputs.
+    /// @param [in] currentHeading current heading of the robot
+    /// @param[in] currentVelocity current velocity of the robot
+    /// @return true/false
+    bool printOutputs(double currentHeading, double currentVelocity);
 
     /// @brief plots velocity vs time graph
     /// @param[in] _velocities vector of velocities
     /// @param[in] _time vector of time
     /// @return true/false
     bool plotVelocities
-    (std::vector<double> _velocities, std::vector<double> _time);
+    (const std::vector<std::pair<double, double>>& velocities);
 
     /// @brief plots heading vs time graph
     /// @param[in] _headings vector of headings
     /// @param[in] _time vector of time
     /// @return true/false
     bool plotHeadings
-    (std::vector<double> _headings, std::vector<double> _time);
+    (const std::vector<std::pair<double, double>>& headings);
 
  private:
-    std::vector<double> velocities;
-    std::vector<double> headings;
-    std::vector<double> time;
+    double targetVelocity;
+    double targetHeading;
 };
 
 
