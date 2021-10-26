@@ -18,10 +18,22 @@
 /// @brief Implementation of an TwoWDRobot Class
 class TwoWDRobot {
  public:
+    /// @brief Setter for Target Heading.
+    /// @param[in] _targetheading target heading of the robot
+    /// @return true/false
     bool setTargetHeading(double _targetHeading);
-    bool setTargetVelocity(double _targetVelocity);
-    bool computeOutput(double initialHeading, double initialVelocity, bool flag);
 
+    /// @brief Setter for target Velocity.
+    /// @param[in] _targetVelocity target Velocity of the robot
+    /// @return true/false
+    bool setTargetVelocity(double _targetVelocity);
+
+    /// @brief method to compute the outputs
+    /// @param[in] initialHeading Initial Heading
+    /// @param[in] initialVelocity Initial Velocity of the robot
+    /// @param[in] flag flag for testing
+    /// @return true/false
+    bool computeOutput(double initialHeading, double initialVelocity, bool flag);
 
 
  private:

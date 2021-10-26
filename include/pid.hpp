@@ -50,6 +50,4 @@ class PID {
     double targetVelocity;
 };
 
-
-
 #endif  // INCLUDE_PID_HPP_

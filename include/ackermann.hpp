@@ -69,7 +69,7 @@ class Ackermann {
     double radiusOfCurvature;
     double maxSteerAngle;
     double dt;
-    // double targetHeading;
+
 };
 
 #endif  // INCLUDE_ACKERMANN_HPP_
