@@ -31,9 +31,11 @@ bool Visualization::setTargetVelocity(double v) {
 bool Visualization::printOutputs
 (double currentHeading, double currentVelocity) {
   std::cout << GREEN << "[Velocity] " << RESET << "Current: "<<
-  currentVelocity << " Target: " << targetVelocity << std::endl;
+  currentVelocity << " m/s" << " Target: "
+  << targetVelocity << " m/s" << std::endl;
   std::cout<< GREEN << "[Heading] " << RESET << "Current: "<<
-  currentHeading << " Target: " << targetHeading << "\n" << std::endl;
+  currentHeading << " deg" << " Target: " << targetHeading
+  << " deg\n" << std::endl;
   return true;
 }
 
@@ -41,10 +43,10 @@ bool Visualization::plotHeadings
 (const std::vector<std::pair<double, double>>& headings) {
     Gnuplot gp;
     gp << "set xrange [0:10]\nset yrange [0:100]\n";
-    gp << "set title \"Steering angle Convergence\"\n";
+    gp << "set title \"Heading Convergence\"\n";
     gp << "set pointsize 1\n";
     gp << "set xlabel \"Time\"\n";
-    gp << "set ylabel \"Heading Angle\"\n";
+    gp << "set ylabel \"Current Heading\"\n";
     gp << "set key outside\n";
     gp << "plot" << gp.file1d(headings) << "with points title 'Heading' lc 3, "
     << targetHeading << " title 'Target Heading' lt 1 lc 4" << std::endl;

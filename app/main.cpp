@@ -17,9 +17,18 @@
  */
 int main() {
     TwoWDRobot robot;
+    double targetHeading;
+    double targetVelocity;
+    std::cout << "Enter Target Heading(deg): ";
+    std::cin >> targetHeading;
+    std::cout << std::endl;
+    std::cout << "Enter Target Velocity(m/s): ";
+    std::cin >> targetVelocity;
+    std::cout << std::endl;
 
-    robot.setTargetHeading(60.0);
-    robot.setTargetVelocity(20.0);
+
+    robot.setTargetHeading(targetHeading);
+    robot.setTargetVelocity(targetVelocity);
     robot.computeOutput(0.0, 0.0, true);
 
     return 0;
