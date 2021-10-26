@@ -26,7 +26,7 @@ bool TwoWDRobot::setTargetVelocity(double _targetVelocity) {
     targetVelocity = _targetVelocity;
     return true;
 }
-bool TwoWDRobot::computeOutput(double initialHeading, double initialVelocity) {
+bool TwoWDRobot::computeOutput(double initialHeading, double initialVelocity, bool flag) {
     Ackermann ackermann;
     PID pid;
     Visualization visuals;
@@ -73,12 +73,17 @@ bool TwoWDRobot::computeOutput(double initialHeading, double initialVelocity) {
            (endTime)/CLOCKS_PER_SEC), currentHeading));
 
         }
-        visuals.printOutputs(currentHeading, currentVelocity);
+        if (flag) {
+            visuals.printOutputs(currentHeading, currentVelocity);
         if (headingDiff < 0.1 && velocityDiff < 0.01) {
             visuals.plotHeadings(headings);
             visuals.plotVelocities(velocities);
             break;
         }
+        } else {
+            break;
+        }
+        
     }
 
     return true;
