@@ -18,25 +18,22 @@ TEST(PID, testSetAttributes) {
     EXPECT_TRUE(pid.setKp(0.5));
     EXPECT_TRUE(pid.setKi(0.005));
     EXPECT_TRUE(pid.setKd(0.001));
-    EXPECT_TRUE(pid.setTargetVelocity(20));
+    EXPECT_TRUE(pid.setTargetVelocity(5));
 }
 
 TEST(PID, testComputePID) {
     double testCurrentVelocity = 0;
-    clock_t startTime = clock();
 
     double velocityDiff = 1000000;
 
     while (true) {
-       clock_t endTime = clock();
-        double dt = (static_cast<double>
-        (endTime - startTime)) / CLOCKS_PER_SEC;
-
+        velocityDiff = 5 - testCurrentVelocity;
+        velocityDiff = 5 - testCurrentVelocity;
         if (velocityDiff > 0.01) {
-            testCurrentVelocity = pid.computePID(testCurrentVelocity, dt);
+            testCurrentVelocity = pid.computePID(testCurrentVelocity, 0.01);
         } else {
             break;
         }
     }
-    EXPECT_TRUE(testCurrentVelocity < 0.1);
+    EXPECT_TRUE(velocityDiff < 0.01);
 }
