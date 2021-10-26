@@ -8,6 +8,7 @@
 
 
 #include <iostream>
+#include <cstdlib>
 #include "twoWDRobot.hpp"
 #include "pid.hpp"
 #include "ackermann.hpp"
