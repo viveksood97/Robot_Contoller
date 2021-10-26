@@ -73,24 +73,115 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a299e66470d0778b5bd5acf2d06b61d67"><td class="memItemLeft" align="right" valign="top"><a id="a299e66470d0778b5bd5acf2d06b61d67"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAckermann.html#a299e66470d0778b5bd5acf2d06b61d67">Ackermann</a> ()</td></tr>
+<tr class="memdesc:a299e66470d0778b5bd5acf2d06b61d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classAckermann.html" title="Implementation of an Ackermann Controller. ">Ackermann</a> class. <br /></td></tr>
+<tr class="separator:a299e66470d0778b5bd5acf2d06b61d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f33c3d021c6c5d66877cb7a0d317e0a"><td class="memItemLeft" align="right" valign="top"><a id="a1f33c3d021c6c5d66877cb7a0d317e0a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAckermann.html#a1f33c3d021c6c5d66877cb7a0d317e0a">~Ackermann</a> ()</td></tr>
+<tr class="memdesc:a1f33c3d021c6c5d66877cb7a0d317e0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for <a class="el" href="classAckermann.html" title="Implementation of an Ackermann Controller. ">Ackermann</a> class. <br /></td></tr>
+<tr class="separator:a1f33c3d021c6c5d66877cb7a0d317e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70edfb9472f629092736004586a5b3ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAckermann.html#a70edfb9472f629092736004586a5b3ce">setRobotProps</a> (double _tread, double _wheelBase, double _radiusOfCurvature, double _maxSteerAngle)</td></tr>
 <tr class="memdesc:a70edfb9472f629092736004586a5b3ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for robot parameters.  <a href="#a70edfb9472f629092736004586a5b3ce">More...</a><br /></td></tr>
 <tr class="separator:a70edfb9472f629092736004586a5b3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac849806d5f7fa705afd1691d0e1564ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAckermann.html#ac849806d5f7fa705afd1691d0e1564ab">setDt</a> (double timeInterval)</td></tr>
-<tr class="memdesc:ac849806d5f7fa705afd1691d0e1564ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for time interval.  <a href="#ac849806d5f7fa705afd1691d0e1564ab">More...</a><br /></td></tr>
-<tr class="separator:ac849806d5f7fa705afd1691d0e1564ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae03561a8d47231a26dcbb0e8661b29b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAckermann.html#ae03561a8d47231a26dcbb0e8661b29b1">setTargetHeading</a> (double heading)</td></tr>
 <tr class="memdesc:ae03561a8d47231a26dcbb0e8661b29b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for targetHeading.  <a href="#ae03561a8d47231a26dcbb0e8661b29b1">More...</a><br /></td></tr>
 <tr class="separator:ae03561a8d47231a26dcbb0e8661b29b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d7fa80feb037e7964e2c6b5044df615"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAckermann.html#a6d7fa80feb037e7964e2c6b5044df615">computeModelOutputs</a> (double currentHeading)</td></tr>
-<tr class="memdesc:a6d7fa80feb037e7964e2c6b5044df615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes outputs according to ackermann steering model.  <a href="#a6d7fa80feb037e7964e2c6b5044df615">More...</a><br /></td></tr>
-<tr class="separator:a6d7fa80feb037e7964e2c6b5044df615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4ea40841c9a1bb8ad0847f5fe29d93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAckermann.html#aef4ea40841c9a1bb8ad0847f5fe29d93">calculateROC</a> ()</td></tr>
+<tr class="memdesc:aef4ea40841c9a1bb8ad0847f5fe29d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">to calculate radiusOfCurvature.  <a href="#aef4ea40841c9a1bb8ad0847f5fe29d93">More...</a><br /></td></tr>
+<tr class="separator:aef4ea40841c9a1bb8ad0847f5fe29d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda04f68ce78522c4582246e0c14c625"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAckermann.html#aeda04f68ce78522c4582246e0c14c625">calculateArc</a> ()</td></tr>
+<tr class="memdesc:aeda04f68ce78522c4582246e0c14c625"><td class="mdescLeft">&#160;</td><td class="mdescRight">to calculate the arcLength.  <a href="#aeda04f68ce78522c4582246e0c14c625">More...</a><br /></td></tr>
+<tr class="separator:aeda04f68ce78522c4582246e0c14c625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad01dde18c335dfda26f4f6e3729f6cdf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAckermann.html#ad01dde18c335dfda26f4f6e3729f6cdf">calculateAngles</a> (double *_innerWheelAngle, double *_outerWheelAngle)</td></tr>
+<tr class="memdesc:ad01dde18c335dfda26f4f6e3729f6cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">to calculate the wheel angles.  <a href="#ad01dde18c335dfda26f4f6e3729f6cdf">More...</a><br /></td></tr>
+<tr class="separator:ad01dde18c335dfda26f4f6e3729f6cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61fd011325719efd9e60f1dbab919d29"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAckermann.html#a61fd011325719efd9e60f1dbab919d29">computeModelOutputs</a> (double currentHeading, double currentVelocity, double dt)</td></tr>
+<tr class="memdesc:a61fd011325719efd9e60f1dbab919d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes outputs according to ackermann steering model.  <a href="#a61fd011325719efd9e60f1dbab919d29">More...</a><br /></td></tr>
+<tr class="separator:a61fd011325719efd9e60f1dbab919d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of an <a class="el" href="classAckermann.html" title="Implementation of an Ackermann Controller. ">Ackermann</a> Controller. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6d7fa80feb037e7964e2c6b5044df615"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d7fa80feb037e7964e2c6b5044df615">&#9670;&nbsp;</a></span>computeModelOutputs()</h2>
+<a id="ad01dde18c335dfda26f4f6e3729f6cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad01dde18c335dfda26f4f6e3729f6cdf">&#9670;&nbsp;</a></span>calculateAngles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ackermann::calculateAngles </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>_innerWheelAngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>_outerWheelAngle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>to calculate the wheel angles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">radiusOfCurvature</td><td>radius of curvature of the turn </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true/false </dd></dl>
+
+</div>
+</div>
+<a id="aeda04f68ce78522c4582246e0c14c625"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeda04f68ce78522c4582246e0c14c625">&#9670;&nbsp;</a></span>calculateArc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ackermann::calculateArc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>to calculate the arcLength. </p>
+<dl class="section return"><dt>Returns</dt><dd>true/false </dd></dl>
+
+</div>
+</div>
+<a id="aef4ea40841c9a1bb8ad0847f5fe29d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef4ea40841c9a1bb8ad0847f5fe29d93">&#9670;&nbsp;</a></span>calculateROC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ackermann::calculateROC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>to calculate radiusOfCurvature. </p>
+<dl class="section return"><dt>Returns</dt><dd>true/false </dd></dl>
+
+</div>
+</div>
+<a id="a61fd011325719efd9e60f1dbab919d29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61fd011325719efd9e60f1dbab919d29">&#9670;&nbsp;</a></span>computeModelOutputs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -99,8 +190,24 @@ Public Member Functions</h2></td></tr>
           <td class="memname">double Ackermann::computeModelOutputs </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>currentHeading</em></td><td>)</td>
+          <td class="paramname"><em>currentHeading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>currentVelocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -113,33 +220,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>newHeading </dd></dl>
-
-</div>
-</div>
-<a id="ac849806d5f7fa705afd1691d0e1564ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac849806d5f7fa705afd1691d0e1564ab">&#9670;&nbsp;</a></span>setDt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Ackermann::setDt </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>timeInterval</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Setter for time interval. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeInterval</td><td>time interval </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true/false </dd></dl>
 
 </div>
 </div>

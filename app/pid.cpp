@@ -13,7 +13,17 @@
  */
 #include <pid.hpp>
 #include <math.h>
-#include <ackermann.hpp>
+
+    PID::PID() {
+    kp = 0;
+    ki = 0;
+    kd = 0;
+    cumulativeError = 0;
+    prevError = 0.0;
+    targetVelocity = 0;
+    }
+
+    PID::~PID() {}
 
     // Setter for proptional gain
     bool PID::setKp(double pGain) {
@@ -37,7 +47,7 @@
         return true;
     }
 
-    //Method to compute PID outputs
+    // Method to compute PID outputs
     double PID::computePID(double currentVelocity, double t) {
         prevError = targetVelocity - currentVelocity;
         double p_term = kp * prevError;

@@ -1,7 +1,6 @@
 // Copyright (c) 2021 Charu Sharma and Vivek Sood
 // Licensed under the MIT License.
 
-
 /// @file   twoWDRobot.cpp
 /// @authors Vivek Sood, Charu Sharma
 /// @brief Phase1- Driver: Vivek Sood Navigator: Charu Sharma
@@ -13,10 +12,15 @@
 #include "pid.hpp"
 #include "ackermann.hpp"
 #include "visualization.hpp"
-#include "gnuplot-iostream.h"
 
 
-
+TwoWDRobot::TwoWDRobot() {
+    targetHeading = 0;
+    targetVelocity = 0;
+    innerWheelAngle = 0;
+    outerWheelAngle = 0;
+}
+TwoWDRobot::~TwoWDRobot() {}
 
 bool TwoWDRobot::setTargetHeading(double _targetHeading) {
     targetHeading = _targetHeading;
@@ -26,7 +30,8 @@ bool TwoWDRobot::setTargetVelocity(double _targetVelocity) {
     targetVelocity = _targetVelocity;
     return true;
 }
-bool TwoWDRobot::computeOutput(double initialHeading, double initialVelocity, bool flag) {
+bool TwoWDRobot::computeOutput(double initialHeading,
+double initialVelocity, bool flag) {
     Ackermann ackermann;
     PID pid;
     Visualization visuals;
@@ -71,7 +76,6 @@ bool TwoWDRobot::computeOutput(double initialHeading, double initialVelocity, bo
            currentVelocity, dt);
            headings.push_back(std::make_pair((static_cast<double>
            (endTime)/CLOCKS_PER_SEC), currentHeading));
-
         }
         if (flag) {
             visuals.printOutputs(currentHeading, currentVelocity);
@@ -83,7 +87,6 @@ bool TwoWDRobot::computeOutput(double initialHeading, double initialVelocity, bo
         } else {
             break;
         }
-        
     }
 
     return true;

@@ -19,6 +19,11 @@
 /// @brief Implementation of an Visualization Class
 class Visualization {
  public:
+    /// @brief Constructor for Visualization class.
+    Visualization();
+    /// @brief Destructor for Visualization class.
+    ~Visualization();
+
     /// @brief Setter for targetVelocity.
     /// @param[in] v current velocity of the robot
     /// @return true/false

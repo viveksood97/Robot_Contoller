@@ -1,11 +1,10 @@
-// Copyright (c) No idea about this :). No copyright.
+// Copyright (c) 2021 Charu Sharma and Vivek Sood
 // Licensed under the MIT License.
 
-
-/// @file   pid.cpp
+/// @file   visualization.cpp
 /// @authors Vivek Sood, Charu Sharma
-/// @brief Driver: Vivek Sood Navigator: Charu Sharma
-/// @date   2021-10-16
+/// @brief Phase1- Driver: Vivek Sood Navigator: Charu Sharma
+/// @brief Phase2- Driver: Charu Sharma Navigator: Vivek Sood
 
 #include "visualization.hpp"
 #include "gnuplot-iostream.h"
@@ -13,6 +12,13 @@
 #define GREEN   "\033[32m"
 #define RESET   "\033[0m"
 #define YELLOW  "\033[33m"
+
+Visualization::Visualization() {
+  targetVelocity = 0;
+  targetHeading = 0;
+}
+Visualization::~Visualization() {}
+
 
 bool Visualization::setTargetHeading(double h) {
   targetHeading = h;

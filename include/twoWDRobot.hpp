@@ -18,6 +18,11 @@
 /// @brief Implementation of an TwoWDRobot Class
 class TwoWDRobot {
  public:
+    /// @brief Constructor for TwoWDRobot class.
+    TwoWDRobot();
+    /// @brief Destructor for TwoWDRobot class.
+    ~TwoWDRobot();
+
     /// @brief Setter for Target Heading.
     /// @param[in] _targetheading target heading of the robot
     /// @return true/false
@@ -33,7 +38,8 @@ class TwoWDRobot {
     /// @param[in] initialVelocity Initial Velocity of the robot
     /// @param[in] flag flag for testing
     /// @return true/false
-    bool computeOutput(double initialHeading, double initialVelocity, bool flag);
+    bool computeOutput(double initialHeading,
+    double initialVelocity, bool flag);
 
 
  private:
@@ -41,9 +47,6 @@ class TwoWDRobot {
     double targetVelocity;
     double innerWheelAngle;
     double outerWheelAngle;
-
-    std::vector<std::pair<double, double>> headings;
-    std::vector<std::pair<double, double>> velocities;
 };
 
 
