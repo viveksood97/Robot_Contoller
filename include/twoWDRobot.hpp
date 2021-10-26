@@ -20,7 +20,7 @@ class TwoWDRobot {
  public:
     bool setTargetHeading(double _targetHeading);
     bool setTargetVelocity(double _targetVelocity);
-    bool computeOutput(double initialHeading, double initialVelocity);
+    bool computeOutput(double initialHeading, double initialVelocity, bool flag);
 
 
 
