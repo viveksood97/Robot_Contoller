@@ -1,28 +1,27 @@
-/**
- * @file main.cpp
- * @authors Vivek Sood and Charu Sharma
- * @brief main file for testing
- * @date 2021-10-16
- * @copyright Copyright (c) 2021
- *
- * ENPM808X Midterm - Phase 1
- *
- */
+// Copyright (c) 2021 Charu Sharma and Vivek Sood
+// Licensed under the MIT License.
+
+/// @file   main.cpp
+/// @authors Vivek Sood, Charu Sharma
+/// @brief Phase1- Driver: Vivek Sood Navigator: Charu Sharma
+/// @brief Phase2- Driver: Charu Sharma Navigator: Vivek Sood
+/// ENPM808X- midterm
 
 #include <iostream>
-#include "pid.hpp"
-#include "ackermann.hpp"
 #include "twoWDRobot.hpp"
 
+/**
+ *  @brief  Main Function to call the methods and show demostration
+ *  @param  None
+ *  @return 0
+ */
 int main() {
-    PID pid;
-    Ackermann ackermann;
     TwoWDRobot robot;
 
-    std::cout << ackermann.computeModelOutputs(5) << std::endl;
-    std::cout << pid.computePID(5) << std::endl;
-    std::cout << "Heading: " << robot.computeHeading(10, 10) << "\n"
-    << "Velocity: " << robot.computeVelocity(10, 10) << std::endl;
+    robot.setTargetHeading(60.0);
+    robot.setTargetVelocity(20.0);
+    robot.computeOutput(0.0, 0.0, true);
+
     return 0;
 }
 

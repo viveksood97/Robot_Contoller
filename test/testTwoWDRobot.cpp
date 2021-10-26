@@ -1,10 +1,9 @@
 /**
  * @file testTwoWDRobot.cpp
  * @authors Vivek Sood and Charu Sharma
- * @date 2021-10-17
  * @copyright Copyright (c) 2021
  *
- * ENPM808X Midterm - Phase 0 Proposal
+ * ENPM808X Midterm - Phase 2
  *
  */
 
@@ -14,13 +13,16 @@
 TwoWDRobot twoWDRobot;
 
 TEST(TwoWDRobotTests, testSetAttributes) {
-    EXPECT_TRUE(twoWDRobot.setDt(0.1));
+    TwoWDRobot twoWDRobot;
+    EXPECT_TRUE(twoWDRobot.setTargetVelocity(5));
+    EXPECT_TRUE(twoWDRobot.setTargetHeading(5));
 }
 
-TEST(TwoWDRobotTests, testcomputeHeading) {
-    EXPECT_TRUE(twoWDRobot.computeHeading(10, 10));
+TEST(TwoWDRobotTests, testComputeOutputs) {
+    TwoWDRobot twoWDRobot;
+    twoWDRobot.setTargetHeading(10.0);
+    twoWDRobot.setTargetVelocity(10.0);
+    EXPECT_TRUE(twoWDRobot.computeOutput(0.0, 0.0, false));
 }
 
-TEST(TwoWDRobotTests, testcomputeVelocity) {
-    EXPECT_TRUE(twoWDRobot.computeVelocity(10, 10));
-}
+
