@@ -23,7 +23,7 @@ We have been following the agile methodology in this project to track all the ta
 
 ## All the necessary links 
 - Link for proposal: [Proposal](https://drive.google.com/file/d/1wLCBFTQJ4ZTIBm7_OMXAdsh-fdLl33LF/view)
-- Link for proposal video: [Proposal Video](https://drive.google.com/drive/folders/1sYS6UQOdyQys9J8Een5iecVueSnCdDFZ)
+- Link for proposal video: [Proposal Video](https://drive.google.com/drive/u/1/my-drive)
 - Link for proposal presentation: [Proposal Presentation](https://docs.google.com/presentation/d/1iLKKHUWsUh4rI2HVl6a0bfbaCnp-vlT2/edit#slide=id.gf6065eecf8_0_326)
 - Link for quad chart: [Quad Chart](https://drive.google.com/file/d/16Bhl7vpuL6NwU_m8zxUkITL6Cl9oWY0c/view)
 - Product Backlog: [AIP](https://docs.google.com/spreadsheets/d/1ycvQy3vhNMT0W67lCo_2hgW9C9ZCRkmT/edit?rtpof=true)
