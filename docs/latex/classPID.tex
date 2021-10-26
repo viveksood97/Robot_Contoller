@@ -1,28 +1,56 @@
 \hypertarget{classPID}{}\section{P\+ID Class Reference}
 \label{classPID}\index{P\+ID@{P\+ID}}
+
+
+Implementation of a \hyperlink{classPID}{P\+ID} controller.  
+
+
+
+
+{\ttfamily \#include $<$pid.\+hpp$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{classPID_a0311b6f7de348499ce24e53ba353514a}{P\+ID} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classPID}{P\+ID} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPID_ab7d389fc5b88d881bc25f5dafd360441}\label{classPID_ab7d389fc5b88d881bc25f5dafd360441}} 
+\hyperlink{classPID_ab7d389fc5b88d881bc25f5dafd360441}{$\sim$\+P\+ID} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \hyperlink{classPID}{P\+ID} class. \end{DoxyCompactList}\item 
 bool \hyperlink{classPID_af2a06a6aacd89993347f6adbc906e9a2}{set\+Kp} (double p\+Gain)
 \begin{DoxyCompactList}\small\item\em Setter for proportional gain. \end{DoxyCompactList}\item 
 bool \hyperlink{classPID_a91359adee27385a381690ae548afe976}{set\+Kd} (double d\+Gain)
 \begin{DoxyCompactList}\small\item\em Setter for diffrential gain. \end{DoxyCompactList}\item 
 bool \hyperlink{classPID_af0d5d19e1657530e1cbca6ed675629e0}{set\+Ki} (double i\+Gain)
 \begin{DoxyCompactList}\small\item\em Setter for integral gain. \end{DoxyCompactList}\item 
-bool \hyperlink{classPID_a182527b0cc7c5869fbb14508b9b35c41}{set\+Dt} (double time\+Interval)
-\begin{DoxyCompactList}\small\item\em Setter for time interval. \end{DoxyCompactList}\item 
 bool \hyperlink{classPID_a430bbe62eb2f904eb45ce081d96dc294}{set\+Target\+Velocity} (double velocity)
 \begin{DoxyCompactList}\small\item\em Setter for target\+Velocity. \end{DoxyCompactList}\item 
-double \hyperlink{classPID_aa7eaae8c7f3a11bb4d53ff8ee17df10f}{compute\+P\+ID} (double current\+Velocity)
+double \hyperlink{classPID_a78583fbe02f451f937db678afb5d1504}{compute\+P\+ID} (double current\+Velocity, double t)
 \begin{DoxyCompactList}\small\item\em Computes the control output using \hyperlink{classPID}{P\+ID} controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Implementation of a \hyperlink{classPID}{P\+ID} controller. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPID_a0311b6f7de348499ce24e53ba353514a}\label{classPID_a0311b6f7de348499ce24e53ba353514a}} 
+\index{P\+ID@{P\+ID}!P\+ID@{P\+ID}}
+\index{P\+ID@{P\+ID}!P\+ID@{P\+ID}}
+\subsubsection{\texorpdfstring{P\+I\+D()}{PID()}}
+{\footnotesize\ttfamily P\+I\+D\+::\+P\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \hyperlink{classPID}{P\+ID} class. 
+
+Implements \hyperlink{classPID}{P\+ID} on the \hyperlink{classTwoWDRobot}{Two\+W\+D\+Robot} class. 
+
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classPID_aa7eaae8c7f3a11bb4d53ff8ee17df10f}\label{classPID_aa7eaae8c7f3a11bb4d53ff8ee17df10f}} 
+\mbox{\Hypertarget{classPID_a78583fbe02f451f937db678afb5d1504}\label{classPID_a78583fbe02f451f937db678afb5d1504}} 
 \index{P\+ID@{P\+ID}!compute\+P\+ID@{compute\+P\+ID}}
 \index{compute\+P\+ID@{compute\+P\+ID}!P\+ID@{P\+ID}}
 \subsubsection{\texorpdfstring{compute\+P\+I\+D()}{computePID()}}
-{\footnotesize\ttfamily double P\+I\+D\+::compute\+P\+ID (\begin{DoxyParamCaption}\item[{double}]{current\+Velocity }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double P\+I\+D\+::compute\+P\+ID (\begin{DoxyParamCaption}\item[{double}]{current\+Velocity,  }\item[{double}]{t }\end{DoxyParamCaption})}
 
 
 
@@ -35,24 +63,6 @@ Computes the control output using \hyperlink{classPID}{P\+ID} controller.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 new\+Velocity 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classPID_a182527b0cc7c5869fbb14508b9b35c41}\label{classPID_a182527b0cc7c5869fbb14508b9b35c41}} 
-\index{P\+ID@{P\+ID}!set\+Dt@{set\+Dt}}
-\index{set\+Dt@{set\+Dt}!P\+ID@{P\+ID}}
-\subsubsection{\texorpdfstring{set\+Dt()}{setDt()}}
-{\footnotesize\ttfamily bool P\+I\+D\+::set\+Dt (\begin{DoxyParamCaption}\item[{double}]{time\+Interval }\end{DoxyParamCaption})}
-
-
-
-Setter for time interval. 
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em time\+Interval} & time interval \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true/false 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classPID_a91359adee27385a381690ae548afe976}\label{classPID_a91359adee27385a381690ae548afe976}} 
 \index{P\+ID@{P\+ID}!set\+Kd@{set\+Kd}}

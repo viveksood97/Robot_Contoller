@@ -12,10 +12,15 @@
 
 #include <iostream>
 
-/// @class PIDController
+/// @class PID
 /// @brief Implementation of a PID controller
 class PID {
  public:
+    /// @brief Constructor for PID class.
+    PID();
+    /// @brief Destructor for PID class.
+    ~PID();
+
     /// @brief Setter for proportional gain.
     /// @param[in] pGain proportional gain
     /// @return true/false
@@ -45,11 +50,9 @@ class PID {
     double kp;
     double ki;
     double kd;
-    double cumulativeError = 0;
-    double prevError = 0.0;
+    double cumulativeError;
+    double prevError;
     double targetVelocity;
 };
-
-
 
 #endif  // INCLUDE_PID_HPP_

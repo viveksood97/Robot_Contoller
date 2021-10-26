@@ -23,11 +23,8 @@ TEST(PID, testSetAttributes) {
 
 TEST(PID, testComputePID) {
     double testCurrentVelocity = 0;
-
-    double velocityDiff = 1000000;
-
+    double velocityDiff;
     while (true) {
-        velocityDiff = 5 - testCurrentVelocity;
         velocityDiff = 5 - testCurrentVelocity;
         if (velocityDiff > 0.01) {
             testCurrentVelocity = pid.computePID(testCurrentVelocity, 0.01);

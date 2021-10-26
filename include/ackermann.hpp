@@ -19,6 +19,11 @@
 /// @brief Implementation of an Ackermann Controller
 class Ackermann {
  public:
+    /// @brief Constructor for Ackermann class.
+    Ackermann();
+    /// @brief Destructor for Ackermann class.
+    ~Ackermann();
+
     /// @brief Setter for robot parameters.
     /// @param[in] _tread the value of tread for the robot
     /// @param[in] _wheelBase the value of wheelBase for the robot
@@ -27,12 +32,6 @@ class Ackermann {
     /// @return true/false
     bool setRobotProps(double _tread, double _wheelBase,
     double _radiusOfCurvature, double _maxSteerAngle);
-
-
-    /// @brief Setter for time interval.
-    /// @param[in] timeInterval time interval
-    /// @return true/false
-    bool setDt(double timeInterval);
 
     /// @brief Setter for targetHeading.
     /// @param[in] heading target heading of the robot
@@ -68,8 +67,6 @@ class Ackermann {
     double wheelBase;
     double radiusOfCurvature;
     double maxSteerAngle;
-    double dt;
-    // double targetHeading;
 };
 
 #endif  // INCLUDE_ACKERMANN_HPP_

@@ -1,5 +1,6 @@
 <map id="app/twoWDRobot.cpp" name="app/twoWDRobot.cpp">
-<area shape="rect" id="node2" href="$twoWDRobot_8hpp.html" title="Driver: Vivek Sood Navigator: Charu Sharma. " alt="" coords="5,80,132,107"/>
-<area shape="rect" id="node4" href="$pid_8hpp.html" title="Driver: Vivek Sood Navigator: Charu Sharma. " alt="" coords="157,80,221,107"/>
-<area shape="rect" id="node5" href="$ackermann_8hpp.html" title="Driver: Vivek Sood Navigator: Charu Sharma. " alt="" coords="245,80,356,107"/>
+<area shape="rect" id="node3" href="$twoWDRobot_8hpp.html" title="Phase1&#45; Driver: Vivek Sood Navigator: Charu Sharma. " alt="" coords="145,80,271,107"/>
+<area shape="rect" id="node6" href="$pid_8hpp.html" title="Phase1&#45; Driver: Vivek Sood Navigator: Charu Sharma. " alt="" coords="5,80,69,107"/>
+<area shape="rect" id="node7" href="$ackermann_8hpp.html" title="Copyright (c) 2021 Charu Sharma and Vivek Sood. " alt="" coords="295,80,406,107"/>
+<area shape="rect" id="node8" href="$visualization_8hpp.html" title="Phase1&#45; Driver: Vivek Sood Navigator: Charu Sharma. " alt="" coords="430,80,549,107"/>
 </map>

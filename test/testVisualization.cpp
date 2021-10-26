@@ -8,7 +8,6 @@
  *
  */
 
-#include <iostream>
 #include <gtest/gtest.h>
 #include "visualization.hpp"
 
@@ -16,7 +15,6 @@
 Visualization visualization;
 
 TEST(visualizationTests, testSetAttributes) {
-    std::vector<double> testing{1, 2, 3, 4};
     EXPECT_TRUE(visualization.setTargetVelocity(10));
     EXPECT_TRUE(visualization.setTargetHeading(10));
 }
