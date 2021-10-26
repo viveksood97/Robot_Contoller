@@ -9,6 +9,10 @@ Phase 1: Planning and Design
  - Driver: [Vivek Sood](<https://github.com/viveksood97>)  (UID 117504279)
  - Navigator: [Charu Sharma](<https://github.com/Sharma117555448>) (UID 117555448)
 
+ Phase 2: Implementation
+ - Driver: [Charu Sharma](<https://github.com/Sharma117555448>) (UID 117555448) 
+ - Navigator: [Vivek Sood](<https://github.com/viveksood97>)  (UID 117504279)
+
 # Overview
 In this project we implement a controller for an Ackermann kinematic model with a maximum steering angle constraint (e.g. < 45 degrees) (input robot target heading and velocity, output steering and the two drive wheel velocities, demonstrating convergence to the set points).
 
@@ -18,11 +22,12 @@ We have been following the agile methodology in this project to track all the ta
 [Notion Agile Board](https://www.notion.so/ba2e3747132a4b9585c73f50611917ac?v=434d3c71adf3443cb7631cdf5d560166)
 
 ## All the necessary links 
-- Link for proposal: [proposal](https://drive.google.com/file/d/1wLCBFTQJ4ZTIBm7_OMXAdsh-fdLl33LF/view)
-- Link for proposal video: [proposal video](https://drive.google.com/drive/folders/1sYS6UQOdyQys9J8Een5iecVueSnCdDFZ)
+- Link for proposal: [Proposal](https://drive.google.com/file/d/1wLCBFTQJ4ZTIBm7_OMXAdsh-fdLl33LF/view)
+- Link for proposal video: [Proposal Video](https://drive.google.com/drive/folders/1sYS6UQOdyQys9J8Een5iecVueSnCdDFZ)
 - Link for proposal presentation: [Proposal Presentation](https://docs.google.com/presentation/d/1iLKKHUWsUh4rI2HVl6a0bfbaCnp-vlT2/edit#slide=id.gf6065eecf8_0_326)
 - Link for quad chart: [Quad Chart](https://drive.google.com/file/d/16Bhl7vpuL6NwU_m8zxUkITL6Cl9oWY0c/view)
 - Product Backlog: [AIP](https://docs.google.com/spreadsheets/d/1ycvQy3vhNMT0W67lCo_2hgW9C9ZCRkmT/edit?rtpof=true)
+- Sprint notes: [Sprint Notes](https://docs.google.com/document/d/1DLwu79wBspcvC7MmG0XjFKFsAxMGOrq1Snp_ugRyVxg/edit)
 
 ## Standard install via command-line
 ```
@@ -69,6 +74,28 @@ doxygen docs/doxygen-file
 
 ## Dependencies
 We have the following library dependencies:
-- pbPlot
-- time.h
+- time.h 
+- gnuPlot - http://stahlke.org/dan/gnuplot-iostream/
 
+Install gnuplot
+```
+sudo apt-get install gnuplot
+```
+Install boost
+```
+sudo apt-get install libboost-all-dev
+```
+## Demo
+Run the program. Once the velocities and headings are converged to the target then graphs will be displayed as below. Also, converged values will be shown in the terminal.
+
+### Heading Convergence
+![](output/gnuplot_headings.png)
+
+### Velocity Convergence
+![](output/gnuPlot_velocities.png)
+
+### Terminal Output 
+![](output/terminal.png)
+
+## References
+- gnuplot- http://stahlke.org/dan/gnuplot-iostream/
