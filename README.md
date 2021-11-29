@@ -5,13 +5,10 @@
 
 
 ## Authors
-Phase 1: Planning and Design
- - Driver: [Vivek Sood](<https://github.com/viveksood97>)  (UID 117504279)
- - Navigator: [Charu Sharma](<https://github.com/Sharma117555448>) (UID 117555448)
+[Vivek Sood](<https://github.com/viveksood97>) (UID 117504279)
 
- Phase 2: Implementation
- - Driver: [Charu Sharma](<https://github.com/Sharma117555448>) (UID 117555448) 
- - Navigator: [Vivek Sood](<https://github.com/viveksood97>)  (UID 117504279)
+
+
 
 # Overview
 In this project we implement a controller for an Ackermann kinematic model with a maximum steering angle constraint (e.g. < 45 degrees) (input robot target heading and velocity, output steering and the two drive wheel velocities, demonstrating convergence to the set points).
