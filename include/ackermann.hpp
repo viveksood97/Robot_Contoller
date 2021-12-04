@@ -22,7 +22,7 @@ class Ackermann {
     /// @brief Constructor for Ackermann class.
     Ackermann();
     /// @brief Destructor for Ackermann class.
-    ~Ackermann();
+    virtual ~Ackermann();
 
     /// @brief Setter for robot parameters.
     /// @param[in] _tread the value of tread for the robot
@@ -30,32 +30,32 @@ class Ackermann {
     /// @param[in] _radiusOfCurvature the value of radiusOfCurvature
     /// @param[in] _maxSteerAngle the value of maxSteerAngle for the robot
     /// @return true/false
-    bool setRobotProps(double _tread, double _wheelBase,
+    virtual bool setRobotProps(double _tread, double _wheelBase,
     double _radiusOfCurvature, double _maxSteerAngle);
 
     /// @brief Setter for targetHeading.
     /// @param[in] heading target heading of the robot
     /// @return true/false
-    bool setTargetHeading(double heading);
+    virtual bool setTargetHeading(double heading);
 
     /// @brief to calculate radiusOfCurvature.
     /// @return true/false
-    bool calculateROC();
+    virtual bool calculateROC();
 
     /// @brief to calculate the arcLength.
     /// @return true/false
-    bool calculateArc();
+    virtual bool calculateArc();
 
     /// @brief to calculate the wheel angles.
     /// @param[in] radiusOfCurvature radius of curvature of the turn
     /// @return true/false
-    bool calculateAngles(double* _innerWheelAngle,
+    virtual bool calculateAngles(double* _innerWheelAngle,
     double* _outerWheelAngle);
 
     /// @brief Computes outputs according to ackermann steering model
     /// @param[in] currentHeading current heading of the robot
     /// @return newHeading
-    double computeModelOutputs(double currentHeading,
+    virtual double computeModelOutputs(double currentHeading,
     double currentVelocity, double dt);
 
 
